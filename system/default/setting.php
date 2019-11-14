@@ -4,10 +4,10 @@
 class systemSetting
 {
 
-    protected $dsn = "mysql:host=localhost;dbname=default;port=3306;charset:utf8";
+    protected $dsn = "mysql:host=localhost;dbname=moonphasestudio;port=3306;charset:utf8";
 
-    protected $user = 'default';
+    protected $user = 'moonphasestudio';
 
-    protected $password = 'pKy9kwDST8lWeiwo';
+    protected $password = 'cqdUczCkTTuk2fcY';
 
 }
