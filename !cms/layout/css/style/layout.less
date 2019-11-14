@@ -1,0 +1,109 @@
+#process{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  font-size: 60px;
+  padding: 10px;
+  display: none;
+  color: @white;
+}
+.window-background{
+  background-color: @white;
+  padding: 10px;
+  .box-shadow-light();
+}
+//Admin (after successful login)
+#current-system{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  .linear-gradient();
+  color: @white;
+}
+.table{
+  background-color: @white;
+  padding: 5px;
+  .box-shadow-light();
+  .status{
+    font-size: 22px;
+  }
+  .event i{
+    font-size: 16px;
+  }
+  .btn{
+    margin: 0 1px 0;
+  }
+}
+.button-event{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  bottom: 50px;
+  opacity: 0.9;
+}
+.im-alert-top{
+  width: 100%;
+  background-color: @light;
+  z-index: 1;
+  text-align: center;
+  font-size: 16px;
+  color: @dark;
+}
+.add-new{
+  padding: 10px;
+  margin: 10px 0 10px;
+}
+.collection-label{
+  margin-top: 10px;
+}
+.edit{
+  padding: 10px 10px 80px;
+}
+#scroll-top{
+  position: fixed;
+  bottom: 55px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+}
+#content-top{
+  z-index: 10;
+  top: 0;
+}
+.section-breadcrumb{
+  ul {
+    padding: 5px;
+    li {
+      display: inline;
+      margin:3px;
+      a{
+        color: @dark;
+      }
+    }
+  }
+}
+#container{
+  margin-top: 5px;
+  padding-bottom: 200px;
+}
+.copy{
+  font-size: 21px;
+}
+.dashboard-box{
+  padding: 10px;
+  background-color: @white;
+  border: 5px solid @light-gray;
+  a{
+    color: @secondary;
+  }
+}
+.last-record{
+  background-color: @light-yellow;
+}
+.modal-footer button:first-child{
+  margin: 0 !important;
+}

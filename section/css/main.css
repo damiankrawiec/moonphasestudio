@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  opacity: 0;
+}
+i.translation {
+  font-style: unset;
+}
+.im-hide {
+  display: none;
+}
+.im-hide-category,
+.im-hide-pagination {
+  display: none;
+}
+.im-preview:hover {
+  opacity: 0.8;
+}
+.im-preview:hover .edit-tool {
+  display: block;
+}
+.edit-tool {
+  position: absolute;
+  display: none;
+  right: 2px;
+  top: 2px;
+  z-index: 1;
+}
+.edit-tool a {
+  color: #a00000;
+}
+#process {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  font-size: 60px;
+  padding: 10px;
+  display: none;
+}
+#scroll-top {
+  position: fixed;
+  bottom: 55px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
