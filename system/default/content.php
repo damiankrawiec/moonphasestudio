@@ -10,6 +10,7 @@ $sectionId = $this->getSection()->id;
 $label = $object->getAllLabel();
 
 ?>
+<!--
 <div class="im-language">
     <div class="container-fluid">
         <div class="row">
@@ -19,6 +20,7 @@ $label = $object->getAllLabel();
         </div>
     </div>
 </div>
+-->
 
 <div class="container-fluid">
 
@@ -32,6 +34,10 @@ $label = $object->getAllLabel();
 
     ?>
 
+    <?php $object->display($sectionId, $label['logo']); ?>
+
+    <?php $object->display($sectionId, $label['slider']); ?>
+
     <?php
 
     //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
@@ -43,8 +49,10 @@ $label = $object->getAllLabel();
 
 </div>
 
+<!--
 <div class="im-footer">
     <div class="container-fluid">
 
     </div>
 </div>
+-->

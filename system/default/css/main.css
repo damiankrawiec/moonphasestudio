@@ -1,12 +1,19 @@
+body {
+  background-color: #0f0a07;
+}
 .im-active img {
-  background-color: #333;
+  background-color: #0f0a07;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 .im-logo {
   text-align: center;
   padding: 5px;
 }
 .im-footer {
-  background-color: #333;
+  background-color: #0f0a07;
   min-height: 300px;
 }
 .im-language ul {
@@ -23,15 +30,25 @@
   margin: 5px;
   cursor: pointer;
 }
-.object {
-  padding: 10px;
-  background-color: #ddd;
-  border: 1px solid #fff;
-}
 .object img {
   width: 100%;
 }
 .object .carousel i {
   font-size: 40px;
+}
+.slider {
+  z-index: 1;
+}
+.slider .object {
+  width: 100%;
+}
+.logo {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+}
+.logo .carousel-caption {
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
