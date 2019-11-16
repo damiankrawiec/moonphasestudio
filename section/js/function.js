@@ -163,27 +163,36 @@ function move($direction, $paginationData) {
 
     if($direction === 'im-left') {
 
-        $object = $first.prevAll('.im-hide-pagination');
+        $object = $first.prevAll('.im-hide-pagination:not(.im-hide-category)');
 
     }
 
     if($direction === 'im-right') {
 
-        $object = $last.nextAll('.im-hide-pagination');
+        $object = $last.nextAll('.im-hide-pagination:not(.im-hide-category)');
 
     }
 
     if($object.length > 0) {
 
-        $first.addClass('im-hide-pagination');
+        $('.' + $label + ' .object').each(function(){
 
-        $last.addClass('im-hide-pagination');
+            $(this).addClass('im-hide-pagination');
 
-        $object.each(function($i){
+        });
 
-            if($i < $number) {
+        var $count = 0;
+        $object.each(function(){
 
-                $(this).removeClass('im-hide-pagination');
+            if($(this).attr('class').indexOf('im-hide-category') === -1) {
+
+                if ($count < $number) {
+
+                    $(this).removeClass('im-hide-pagination');
+
+                    $count++;
+
+                }
 
             }
 
@@ -237,7 +246,7 @@ function scrollEvent() {
 
     $window.scroll(function() {
 
-        if($window.scrollTop() > 200){
+        if($window.scrollTop() > 300){
 
             $('#scroll-top').fadeIn();
 
