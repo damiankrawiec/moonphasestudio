@@ -38,6 +38,8 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['logo']); ?>
 
+    <?php $object->display($sectionId, $label['menu']); ?>
+
     <?php $object->display($sectionId, $label['slider']); ?>
 
     <?php

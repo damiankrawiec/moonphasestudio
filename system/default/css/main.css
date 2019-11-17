@@ -33,8 +33,18 @@ body {
 .object img {
   width: 100%;
 }
-.object .carousel i {
+.object .carousel a i {
   font-size: 40px;
+}
+.object .carousel h5 i,
+.object .carousel a i {
+  color: #d7af69;
+}
+.object .carousel h5 i {
+  font-size: 40px;
+}
+.object .carousel p {
+  font-size: 22px;
 }
 .slider {
   z-index: 1;
@@ -42,13 +52,23 @@ body {
 .slider .object {
   width: 100%;
 }
+.menu,
 .logo {
-  z-index: 2;
   position: absolute;
+  z-index: 2;
+}
+.logo {
   top: 50px;
   left: 80px;
 }
 .logo .carousel-caption {
   display: none !important;
+}
+.menu {
+  top: 35px;
+  right: 80px;
+}
+.menu a {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

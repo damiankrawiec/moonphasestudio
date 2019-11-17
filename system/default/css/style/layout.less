@@ -29,8 +29,17 @@
     width: 100%;
   }
   .carousel{
-    i{
+    a i{
       font-size: 40px;
+    }
+    h5 i, a i{
+      color: @accent;
+    }
+    h5 i{
+      font-size: 40px;
+    }
+    p{
+      font-size: 22px;
     }
   }
 }
@@ -40,12 +49,21 @@
     width: 100%;
   }
 }
-.logo{
-  z-index: 2;
+.menu, .logo{
   position: absolute;
+  z-index: 2;
+}
+.logo{
   top: 50px;
   left: 80px;
   .carousel-caption{
     display: none !important;
+  }
+}
+.menu{
+  top: 35px;
+  right: 80px;
+  a{
+    color: @white;
   }
 }
