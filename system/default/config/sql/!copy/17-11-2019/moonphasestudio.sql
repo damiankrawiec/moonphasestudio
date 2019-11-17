@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 17 Lis 2019, 10:10
+-- Czas generowania: 17 Lis 2019, 20:58
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `im_image` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_image`
@@ -155,7 +155,8 @@ INSERT INTO `im_image` (`image_id`, `section`, `name`, `content`, `url`, `status
 (1, 0, 'Jakaś zajawka', '<p>...i co taka zajawka może oznaczać...</p>', 'dsc_9479-553351831e1535b59e410701eff888c9.jpg', 'on', 'Noc przy ognisku', '2019-11-16 09:34:01', '2019-11-16 10:06:02'),
 (2, 0, 'Tytuł drugiego slide\'u', '<p>tu też zajawka</p>', 'slide4-ec8c0836e4f3deadd07d30f8c0000e49.jpg', 'on', 'Kobieta patrzy na wprost, zielone oczy', '2019-11-16 10:06:33', '2019-11-16 10:34:34'),
 (3, 0, 'Slide 3', '<p>...i zajawka...</p>', 'slide3-5fc6d850a2dcedfb07537fdfc083be30.jpg', 'on', 'Kobieta patrzy w dół, czarne oczy', '2019-11-16 10:07:26', '2019-11-16 10:34:16'),
-(4, 1, 'Logo', '', 'logo-c554cc95b2cfb29325743f2600f0efc1.png', 'on', 'Logo 16-11-2019', '2019-11-16 10:37:10', '2019-11-16 10:44:14');
+(4, 1, 'Logo', '', 'logo-c554cc95b2cfb29325743f2600f0efc1.png', 'on', 'Logo 16-11-2019', '2019-11-16 10:37:10', '2019-11-16 10:44:14'),
+(5, 0, 'scroll down', '', 'scroll-a325cddac15192bbdd699761d6568d54.gif', 'on', 'Animowana ikona gif', '2019-11-17 21:18:25', '2019-11-17 21:29:40');
 
 --
 -- Wyzwalacze `im_image`
@@ -191,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `im_label` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`label_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_label`
@@ -200,7 +201,9 @@ CREATE TABLE IF NOT EXISTS `im_label` (
 INSERT INTO `im_label` (`label_id`, `name`, `system_name`, `description`, `date_create`, `date_modify`) VALUES
 (1, 'Slider główny', 'slider', NULL, '2019-11-16 09:30:22', '2019-11-16 09:30:22'),
 (2, 'Logo', 'logo', NULL, '2019-11-16 10:37:58', '2019-11-16 10:37:58'),
-(3, 'Menu', 'menu', NULL, '2019-11-17 10:05:13', '2019-11-17 10:05:13');
+(3, 'Menu', 'menu', NULL, '2019-11-17 10:05:13', '2019-11-17 10:05:13'),
+(4, 'Prawe menu (hamburger)', 'right-menu', NULL, '2019-11-17 15:45:30', '2019-11-17 15:45:30'),
+(5, 'Ikona \"scroll down\"', 'icon-scroll-down', NULL, '2019-11-17 21:15:21', '2019-11-17 21:15:21');
 
 --
 -- Wyzwalacze `im_label`
@@ -238,7 +241,14 @@ CREATE TABLE IF NOT EXISTS `im_label_section` (
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`label_section_id`),
   KEY `label_id` (`label_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_label_section`
+--
+
+INSERT INTO `im_label_section` (`label_section_id`, `label_id`, `section`, `class`, `description`, `date_create`, `date_modify`) VALUES
+(1, 5, 0, 'w-100 text-center', '', '2019-11-17 21:32:09', '2019-11-17 21:32:28');
 
 --
 -- Wyzwalacze `im_label_section`
@@ -373,7 +383,7 @@ CREATE TABLE IF NOT EXISTS `im_object` (
   PRIMARY KEY (`object_id`),
   KEY `type_id` (`type_id`),
   KEY `label_id` (`label_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_object`
@@ -381,8 +391,10 @@ CREATE TABLE IF NOT EXISTS `im_object` (
 
 INSERT INTO `im_object` (`object_id`, `type_id`, `label_id`, `section`, `system_name`, `name`, `content`, `link`, `email`, `form`, `icon`, `position`, `status`, `description`, `date`, `date_create`, `date_modify`) VALUES
 (1, 1, 1, 0, 'Slider główny', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-16', '2019-11-16 09:32:24', '2019-11-16 10:33:25'),
-(2, 2, 2, 0, 'Logo', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-16', '2019-11-16 10:38:16', '2019-11-16 10:38:25'),
-(3, 3, 3, 0, 'Menu', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 10:05:53', '2019-11-17 10:36:52');
+(2, 2, 2, 0, 'Logo', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-16', '2019-11-16 10:38:16', '2019-11-17 20:10:59'),
+(3, 3, 3, 0, 'Menu', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 10:05:53', '2019-11-17 20:09:19'),
+(4, 4, 4, 0, 'Portfolio', 'Portfolio', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 15:49:17', '2019-11-17 21:14:18'),
+(5, 5, 5, 0, 'Obraz gif', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 21:17:32', '2019-11-17 21:19:43');
 
 --
 -- Wyzwalacze `im_object`
@@ -456,7 +468,7 @@ CREATE TABLE IF NOT EXISTS `im_object_image` (
   PRIMARY KEY (`object_image_id`),
   KEY `object_id` (`object_id`),
   KEY `image_id` (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_object_image`
@@ -466,7 +478,8 @@ INSERT INTO `im_object_image` (`object_image_id`, `object_id`, `image_id`, `posi
 (15, 1, 1, 0),
 (16, 1, 2, 0),
 (17, 1, 3, 0),
-(18, 2, 4, 0);
+(19, 2, 4, 0),
+(21, 5, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -559,16 +572,19 @@ CREATE TABLE IF NOT EXISTS `im_section` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`section_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_section`
 --
 
 INSERT INTO `im_section` (`section_id`, `parent`, `name`, `name_url`, `meta`, `icon`, `position`, `status`, `description`, `date_create`, `date_modify`) VALUES
-(1, 0, 'HOME', 'home', 'Opis strony głownej', 'fal fa-home', 1, 'on', '', '2019-11-14 21:28:52', '2019-11-17 10:08:15'),
-(2, 0, 'O NAS', 'o-nas', '', 'fal fa-building', 2, 'on', '', '2019-11-17 10:07:28', '2019-11-17 10:43:48'),
-(3, 0, 'OFERTA/PORTFOLIO', 'oferta-portfolio', '', 'fal fa-camera-alt', 3, 'on', '', '2019-11-17 10:07:54', '2019-11-17 10:44:42');
+(1, 0, 'HOME', 'home', 'Opis strony głownej', 'fal fa-home', 1, 'on', '', '2019-11-14 21:28:52', '2019-11-17 20:03:05'),
+(2, 0, 'O NAS', 'o-nas', '', 'fal fa-users', 2, 'on', '', '2019-11-17 10:07:28', '2019-11-17 20:51:44'),
+(3, 0, 'OFERTA/PORTFOLIO', 'oferta-portfolio', '', 'fal fa-camera-retro', 3, 'on', '', '2019-11-17 10:07:54', '2019-11-17 20:31:28'),
+(4, 0, 'KONTAKT', 'kontakt', '', 'fal fa-map-marked-alt', 4, 'on', '', '2019-11-17 15:10:28', '2019-11-17 20:03:05'),
+(5, 0, 'Hamburger', 'hamburger', '', 'fal fa-bars', 6, 'on', 'Ikona do wysuwanego z prawej strony menu', '2019-11-17 15:20:51', '2019-11-17 20:03:05'),
+(6, 0, 'BLOG', 'blog', '', 'fal fa-scroll', 5, 'on', '', '2019-11-17 20:02:47', '2019-11-17 20:09:44');
 
 --
 -- Wyzwalacze `im_section`
@@ -603,7 +619,7 @@ CREATE TABLE IF NOT EXISTS `im_section_object` (
   PRIMARY KEY (`section_object_id`),
   KEY `section_id` (`section_id`),
   KEY `object_id` (`object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_section_object`
@@ -611,10 +627,22 @@ CREATE TABLE IF NOT EXISTS `im_section_object` (
 
 INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`) VALUES
 (10, 1, 1),
-(11, 1, 2),
-(13, 1, 3),
-(14, 2, 3),
-(15, 3, 3);
+(17, 1, 3),
+(18, 2, 3),
+(19, 3, 3),
+(20, 4, 3),
+(21, 6, 3),
+(22, 1, 2),
+(23, 2, 2),
+(24, 3, 2),
+(25, 4, 2),
+(26, 6, 2),
+(77, 1, 4),
+(78, 2, 4),
+(79, 3, 4),
+(80, 4, 4),
+(81, 6, 4),
+(83, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -781,7 +809,7 @@ CREATE TABLE IF NOT EXISTS `im_type` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_type`
@@ -790,7 +818,9 @@ CREATE TABLE IF NOT EXISTS `im_type` (
 INSERT INTO `im_type` (`type_id`, `name`, `class`, `description`, `date_create`, `date_modify`) VALUES
 (1, 'Slider główny', '', NULL, '2019-11-16 09:30:44', '2019-11-16 09:30:44'),
 (2, 'Logo', '', NULL, '2019-11-16 10:37:46', '2019-11-16 10:37:46'),
-(3, 'Menu', '', NULL, '2019-11-17 10:05:27', '2019-11-17 10:05:27');
+(3, 'Menu', '', NULL, '2019-11-17 10:05:27', '2019-11-17 10:05:27'),
+(4, 'Prawe menu (hamburger)', '', NULL, '2019-11-17 15:48:19', '2019-11-17 15:48:19'),
+(5, 'Ikona \"scroll down\"', '', '', '2019-11-17 21:16:43', '2019-11-17 21:31:42');
 
 --
 -- Wyzwalacze `im_type`
@@ -831,7 +861,7 @@ CREATE TABLE IF NOT EXISTS `im_type_property` (
   PRIMARY KEY (`type_property_id`),
   KEY `type_id` (`type_id`),
   KEY `property_id` (`property_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_type_property`
@@ -839,8 +869,10 @@ CREATE TABLE IF NOT EXISTS `im_type_property` (
 
 INSERT INTO `im_type_property` (`type_property_id`, `type_id`, `property_id`, `class`, `class_field`, `position`, `description`, `date_create`, `date_modify`) VALUES
 (1, 1, 4, 'col-12', '', 1, '', '2019-11-16 09:30:52', '2019-11-16 09:31:10'),
-(2, 2, 4, '', '', 1, NULL, '2019-11-16 10:38:06', '2019-11-16 10:38:06'),
-(3, 3, 7, 'navbar navbar-expand-lg', '', 1, '', '2019-11-17 10:05:38', '2019-11-17 10:46:57');
+(2, 2, 4, 'animated rotateIn', '', 1, '', '2019-11-16 10:38:06', '2019-11-17 17:08:19'),
+(3, 3, 7, 'navbar navbar-expand-lg animated slideInRight', '', 1, '', '2019-11-17 10:05:38', '2019-11-17 20:08:17'),
+(5, 4, 1, 'h2 text-center w-100 p-1', '', 2, '', '2019-11-17 20:56:10', '2019-11-17 21:08:20'),
+(6, 5, 4, '', '', 1, '', '2019-11-17 21:16:59', '2019-11-17 21:21:06');
 
 --
 -- Wyzwalacze `im_type_property`

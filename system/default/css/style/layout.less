@@ -25,6 +25,7 @@
   }
 }
 .object{
+  width: 100%;
   img{
     width: 100%;
   }
@@ -45,8 +46,8 @@
 }
 .slider{
   z-index: 1;
-  .object{
-    width: 100%;
+  .row{
+    margin: -7px;
   }
 }
 .menu, .logo{
@@ -60,10 +61,71 @@
     display: none !important;
   }
 }
+.right-menu{
+  width: 0%;
+  height: 100%;
+  background: @accent;
+  z-index: 3;
+  float: right;
+}
 .menu{
   top: 35px;
   right: 80px;
   a{
     color: @white;
+    font-size: 16px;
   }
+  li{
+    .active-arrow {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      i {
+        font-size: 26px;
+        text-align: center;
+        position: absolute;
+        top: -8px;
+        color: @accent;
+      }
+    }
+  }
+  li.active{
+    a {
+      color: @accent;
+    }
+  }
+  .navbar-nav{
+    li:last-child{
+      width: 30px;
+      i{
+        font-size: 24px;
+        padding-top: 1px
+      }
+    }
+  }
+  #im_section-name-5{
+    display: none;
+  }
+}
+.icon-scroll-down{
+  position: relative;
+  color: @white;
+  top: 120px;
+  div{
+    width: 100%;
+    img{
+      width: 130px;
+    }
+  }
+  .object{
+    position: absolute;
+    top: -400px;
+    margin-left: 30px;
+    h5{
+      display: none;
+    }
+  }
+}
+#process, #scroll-top{
+  color: @accent;
 }

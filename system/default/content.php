@@ -22,7 +22,7 @@ $label = $object->getAllLabel();
 </div>
 -->
 
-<div class="container-fluid">
+<div class="container-fluid im-content">
 
     <?php
 
@@ -42,6 +42,8 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['slider']); ?>
 
+    <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
+
     <?php
 
     //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
@@ -52,6 +54,8 @@ $label = $object->getAllLabel();
     ?>
 
 </div>
+
+<?php $object->display($sectionId, $label['right-menu']); ?>
 
 <!--
 <div class="im-footer">
