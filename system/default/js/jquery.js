@@ -39,10 +39,12 @@ $(function(){
 
     }, function () {
 
-        appendMenuIcon('.menu li.active');
+        $('.menu li div').remove();
+
+        appendMenuIcon($('.menu li.active'));
 
     });
 
-    appendMenuIcon('.menu li.active');
+    appendMenuIcon($('.menu li.active'));
 
 });
