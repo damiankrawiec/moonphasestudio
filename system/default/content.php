@@ -42,6 +42,7 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['slider']); ?>
 
+    <!-- Animated icon -->
     <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
 
     <?php
