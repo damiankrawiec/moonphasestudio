@@ -9,9 +9,9 @@ $(function(){
         var $icon;
         if($clickCount%2 === 0) {
 
-            changeWidth('.im-content', '80%');
+            changeWidth('.im-content', '75%');
 
-            changeWidth('.right-menu', '20%');
+            changeWidth('.right-menu', '25%');
 
             $icon = 'fal fa-times';
 
@@ -28,6 +28,36 @@ $(function(){
         $(this).attr('class', $icon);
 
         $clickCount++;
+
+    });
+
+    $('.navbar-toggler').click(function(){
+
+        var $this = $(this);
+
+        if(!$this.next().is(':visible')) {
+
+            $this.parents('.menu').addClass('fixed-menu');
+
+            $this.children().hide();
+
+            $this.children().next().show();
+
+        }else{
+
+            setTimeout(function(){
+
+                $this.children().show();
+
+                $this.children().addClass('animated rotateIn');
+
+                $this.children().next().hide();
+
+                $this.parents('.menu').removeClass('fixed-menu');
+
+            }, 400);
+
+        }
 
     });
 

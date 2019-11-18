@@ -1,1 +1,30 @@
 //col < 576px, col-sm >= 576px, col-md >= 768px, col-lg >= 992px, col-xl >= 1200px
+@media (max-width: @col-lg) {
+  .menu li:last-child {
+    display: none;
+  }
+  .im-content{
+    width: 100% !important;
+  }
+  .right-menu{
+    width: 0% !important;
+  }
+}
+@media (min-width: @col-lg) {
+  .fixed-menu{
+    position: absolute;
+    top: 35px;
+    left: unset;
+    right: 80px;
+    background: none;
+    padding-left: unset;
+    width: auto;
+    z-index: 2;
+  }
+}
+@media (max-width: @col) {
+  .menu{
+    top: 10px;
+    right: 45px;
+  }
+}

@@ -49,6 +49,7 @@
   .row{
     margin: -7px;
   }
+  overflow: hidden;
 }
 .menu, .logo{
   position: absolute;
@@ -128,4 +129,13 @@
 }
 #process, #scroll-top{
   color: @accent;
+}
+.fixed-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: @black;
+  padding-left: 33px;
+  width: 100%;
+  z-index: 20;
 }
