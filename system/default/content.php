@@ -45,6 +45,10 @@ $label = $object->getAllLabel();
     <!-- Animated icon -->
     <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
 
+    <?php $object->display($sectionId, $label['content']); ?>
+
+    <?php $object->display($sectionId, $label['trust']); ?>
+
     <?php
 
     //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
