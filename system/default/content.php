@@ -47,7 +47,7 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['content']); ?>
 
-    <?php $object->display($sectionId, $label['trust']); ?>
+    <?php $object->display($sectionId, $label['trust'], 'pagination:6'); ?>
 
     <?php
 

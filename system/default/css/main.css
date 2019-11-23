@@ -169,6 +169,19 @@ body {
 .content .text {
   font-size: 26px;
 }
+.trust {
+  padding: 100px 300px 100px;
+  background-color: #fff;
+}
+.trust .carousel-item {
+  padding: 20px;
+}
+.trust .carousel-caption {
+  display: none !important;
+}
+.trust .pagination-arrow {
+  color: #0f0a07;
+}
 @media (max-width: 992px) {
   .menu li:last-child {
     display: none;
