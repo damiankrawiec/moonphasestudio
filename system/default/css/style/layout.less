@@ -18,9 +18,18 @@
 .objects{
   .pagination-arrow{
     text-align: center;
+    z-index: 1;
     i{
-      margin: 5px;
+      position: absolute;
       cursor: pointer;
+      font-size: 60px;
+      top: 39px;
+    }
+    i#im-left{
+      left: 0;
+    }
+    i#im-right{
+      right: 0;
     }
   }
 }
@@ -135,6 +144,12 @@
 #process, #scroll-top{
   color: @accent;
 }
+#scroll-top{
+  background: @white;
+  padding: 7px;
+  opacity: 0.7;
+  z-index: 3;
+}
 .fixed-menu{
   position: fixed;
   top: 0;
@@ -145,7 +160,7 @@
   z-index: 20;
 }
 .content{
-  padding: 80px 300px 80px;
+  padding: 50px 15% 150px;
   text-align: center;
   line-height: 50px;
   text-transform: uppercase;
@@ -159,8 +174,12 @@
     font-size: 26px;
   }
 }
+.after-content-title{
+  margin-bottom: -80px;
+  font-size: 40px;
+}
 .trust{
-  padding: 100px 300px 100px;
+  padding: 100px 250px 100px;
   background-color: @white;
   .carousel-item{
     padding: 20px;
@@ -170,5 +189,8 @@
   }
   .pagination-arrow{
     color: @black;
+  }
+  img{
+    width: auto;
   }
 }

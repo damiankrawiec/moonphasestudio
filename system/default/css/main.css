@@ -34,10 +34,19 @@ body {
 }
 .objects .pagination-arrow {
   text-align: center;
+  z-index: 1;
 }
 .objects .pagination-arrow i {
-  margin: 5px;
+  position: absolute;
   cursor: pointer;
+  font-size: 60px;
+  top: 39px;
+}
+.objects .pagination-arrow i#im-left {
+  left: 0;
+}
+.objects .pagination-arrow i#im-right {
+  right: 0;
 }
 .object {
   width: 100%;
@@ -145,6 +154,12 @@ body {
 #scroll-top {
   color: #d7af69;
 }
+#scroll-top {
+  background: #fff;
+  padding: 7px;
+  opacity: 0.7;
+  z-index: 3;
+}
 .fixed-menu {
   position: fixed;
   top: 0;
@@ -155,7 +170,7 @@ body {
   z-index: 20;
 }
 .content {
-  padding: 80px 300px 80px;
+  padding: 50px 15% 150px;
   text-align: center;
   line-height: 50px;
   text-transform: uppercase;
@@ -169,8 +184,12 @@ body {
 .content .text {
   font-size: 26px;
 }
+.after-content-title {
+  margin-bottom: -80px;
+  font-size: 40px;
+}
 .trust {
-  padding: 100px 300px 100px;
+  padding: 100px 250px 100px;
   background-color: #fff;
 }
 .trust .carousel-item {
@@ -181,6 +200,36 @@ body {
 }
 .trust .pagination-arrow {
   color: #0f0a07;
+}
+.trust img {
+  width: auto;
+}
+@media (max-width: 1800px) {
+  .trust {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .content {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .objects .pagination-arrow i {
+    top: 100px;
+  }
+  .content .title {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .content .text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .objects .pagination-arrow i {
+    top: 250px;
+  }
 }
 @media (max-width: 992px) {
   .menu li:last-child {
@@ -217,6 +266,12 @@ body {
   .carousel-control-prev,
   .carousel-control-next {
     display: none;
+  }
+  .content .title {
+    font-size: 20px;
+  }
+  .content .text {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=main.css.map */
