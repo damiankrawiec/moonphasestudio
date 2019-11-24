@@ -2,10 +2,6 @@
   text-align: center;
   padding: 5px;
 }
-.im-footer{
-  background-color: @black;
-  min-height: 300px;
-}
 .im-language{
   ul{
     float: right;
@@ -74,7 +70,7 @@
 .logo-min{
   position: relative;
 }
-.right-menu{
+.right-menu-box{
   width: 0%;
   height: 100%;
   background: @accent;
@@ -82,6 +78,18 @@
   position: fixed;
   right: 0;
   top: 0;
+  .right-menu{
+    display: none;
+    padding: 15px;
+    .no-data, .carousel-caption{
+      display: none !important;
+    }
+    .object{
+      img{
+        border: 5px solid @white;
+      }
+    }
+  }
 }
 .menu{
   top: 35px;
@@ -175,11 +183,11 @@
   }
 }
 .after-content-title{
-  margin-bottom: -80px;
+  margin-bottom: -110px;
   font-size: 40px;
 }
 .trust{
-  padding: 100px 250px 100px;
+  padding: 150px 250px 100px;
   background-color: @white;
   .carousel-item{
     padding: 20px;
@@ -193,4 +201,18 @@
   img{
     width: auto;
   }
+}
+.form{
+  .form-title{
+    padding-top: 42px;
+    font-size: 32px;
+  }
+}
+.im-send{
+  background: none;
+  .border-radius(0);
+  color: @white;
+  font-size: 16px;
+  padding: 12px;
+  margin-left: 10px;
 }

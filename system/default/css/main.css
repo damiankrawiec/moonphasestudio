@@ -17,13 +17,19 @@ body {
   margin: 0;
   padding: 0;
 }
+input.form-control {
+  background: none !important;
+  color: #fff !important;
+  padding: 30px 18px 31px !important;
+  margin: 10px 0 10px;
+  font-size: 20px !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
 .im-logo {
   text-align: center;
   padding: 5px;
-}
-.im-footer {
-  background-color: #0f0a07;
-  min-height: 300px;
 }
 .im-language ul {
   float: right;
@@ -89,7 +95,7 @@ body {
 .logo-min {
   position: relative;
 }
-.right-menu {
+.right-menu-box {
   width: 0%;
   height: 100%;
   background: #d7af69;
@@ -97,6 +103,17 @@ body {
   position: fixed;
   right: 0;
   top: 0;
+}
+.right-menu-box .right-menu {
+  display: none;
+  padding: 15px;
+}
+.right-menu-box .right-menu .no-data,
+.right-menu-box .right-menu .carousel-caption {
+  display: none !important;
+}
+.right-menu-box .right-menu .object img {
+  border: 5px solid #fff;
 }
 .menu {
   top: 35px;
@@ -185,11 +202,11 @@ body {
   font-size: 26px;
 }
 .after-content-title {
-  margin-bottom: -80px;
+  margin-bottom: -110px;
   font-size: 40px;
 }
 .trust {
-  padding: 100px 250px 100px;
+  padding: 150px 250px 100px;
   background-color: #fff;
 }
 .trust .carousel-item {
@@ -203,6 +220,20 @@ body {
 }
 .trust img {
   width: auto;
+}
+.form .form-title {
+  padding-top: 42px;
+  font-size: 32px;
+}
+.im-send {
+  background: none;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  margin-left: 10px;
 }
 @media (max-width: 1800px) {
   .trust {
@@ -238,8 +269,11 @@ body {
   .im-content {
     width: 100% !important;
   }
-  .right-menu {
+  .right-menu-box {
     width: 0% !important;
+  }
+  .right-menu {
+    display: none !important;
   }
 }
 @media (min-width: 992px) {

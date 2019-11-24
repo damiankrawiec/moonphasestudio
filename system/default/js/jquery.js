@@ -11,13 +11,13 @@ $(function(){
 
             changeWidth('.im-content', '75%');
 
-            changeWidth('.right-menu', '25%');
+            changeWidth('.right-menu-box', '25%');
 
             $icon = 'fal fa-times';
 
         }else{
 
-            changeWidth('.right-menu', '0%');
+            changeWidth('.right-menu-box', '0%');
 
             changeWidth('.im-content', '100%');
 
@@ -26,6 +26,18 @@ $(function(){
         }
 
         $(this).attr('class', $icon);
+
+        if($clickCount%2 === 0) {
+
+            setTimeout(function () {
+                $('.right-menu').fadeIn();
+            }, 500);
+
+        }else{
+
+            $('.right-menu').hide();
+
+        }
 
         $clickCount++;
 

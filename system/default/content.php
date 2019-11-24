@@ -51,23 +51,37 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['trust'], 'pagination:4'); ?>
 
-    <?php
+    <div class="row">
 
-    //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
-    //In static file should be defined class, rows, col, etc. - content fix to rest page box
-    //Name of files may only string section - check in foreach(dir) and stristr()
-    $object->displayStatic($sectionId);
+        <div class="col-12 col-lg-6">
 
-    ?>
+            <?php
 
-</div>
+            //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
+            //In static file should be defined class, rows, col, etc. - content fix to rest page box
+            //Name of files may only string section - check in foreach(dir) and stristr()
+            $object->displayStatic($sectionId);
 
-<?php $object->display($sectionId, $label['right-menu']); ?>
+            //home - Google Maps
 
-<!--
-<div class="im-footer">
-    <div class="container-fluid">
+            ?>
+
+        </div>
+
+        <div class="col-12 col-lg-6">
+
+            <?php $object->display($sectionId, $label['form']); ?>
+
+        </div>
 
     </div>
+
+    <?php $object->display($sectionId, $label['footer']); ?>
+
 </div>
--->
+
+<div class="right-menu-box">
+
+    <?php $object->display($sectionId, $label['right-menu']); ?>
+
+</div>
