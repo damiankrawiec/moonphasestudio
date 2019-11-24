@@ -62,7 +62,7 @@ $label = $object->getAllLabel();
             //Name of files may only string section - check in foreach(dir) and stristr()
             $object->displayStatic($sectionId);
 
-            //home - Google Maps
+            //home - Google Maps (API)
 
             ?>
 
