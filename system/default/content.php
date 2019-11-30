@@ -72,9 +72,7 @@ $label = $object->getAllLabel();
 
         <div class="col-12 col-lg-6">
 
-            <?php $object->display($sectionId, $label['form']); ?>
-
-            <?php $object->display($sectionId, $label['company-data-content']); ?>
+            <?php $object->display($sectionId, $label['next-map']); ?>
 
         </div>
 
@@ -82,11 +80,11 @@ $label = $object->getAllLabel();
 
     <div class="im-footer">
 
-        <?php $object->display($sectionId, $label['company-data-footer'], 'begin'); ?>
+        <?php $object->display($sectionId, $label['footer-left'], 'begin'); ?>
 
-        <?php $object->display($sectionId, $label['site-map-footer']); ?>
+        <?php $object->display($sectionId, $label['footer-right'], 'end'); ?>
 
-        <?php $object->display($sectionId, $label['footer-content'], 'end'); ?>
+        <?php $object->display($sectionId, $label['footer-bottom']); ?>
 
     </div>
 

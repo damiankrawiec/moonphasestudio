@@ -207,12 +207,10 @@
     width: auto;
   }
 }
-.form, .company-data-footer{
-  .form-title{
+.form-title{
     padding-top: 42px;
     font-size: 32px;
   }
-}
 .contact-form{
   img{
     float: left;
@@ -224,42 +222,32 @@
   color: @white;
   font-size: 16px;
   padding: 12px;
-  margin-left: 10px;
+  margin: 0 10px 0;
+  float: left;
 }
-.company-data-footer, .site-map-footer{
-  padding: 20px 0 30px 70px;
-}
-.company-data-footer{
-  img{
-    width: auto;
-    padding-bottom: 20px;
-  }
-  .carousel-caption{
-    display: none !important;
-  }
-}
-.company-data-content{
-  padding-left: 30px;
-}
-.company-data-content, .company-data-footer, .site-map-footer {
+.next-map, .footer-left, .footer-right {
   a {
     font-size: 16px !important;
+    color: @white;
   }
-
   i.fal {
     color: @accent;
     font-size: 20px;
   }
-
-  a {
-    color: @white;
+}
+.company-data{
+  padding: 20px;
+  line-height: 30px;
+  .carousel-caption{
+    display: none !important;
+  }
+  img{
+    width: auto;
+    padding-bottom: 20px;
   }
 }
-.company-data, .company-data-content{
-  padding-left: 18px;
-  line-height: 30px;
-}
-.site-map-footer{
+.footer-right{
+  padding: 40px;
   .navbar-nav li:last-child {
     display: none;
   }
@@ -270,7 +258,7 @@
     }
   }
 }
-.footer-content{
+.footer-bottom{
   padding-top: 20px;
   a{
     color: @accent;
