@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 14 Lis 2019, 20:39
+-- Czas generowania: 24 Lis 2019, 20:01
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -145,7 +145,28 @@ CREATE TABLE IF NOT EXISTS `im_image` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_image`
+--
+
+INSERT INTO `im_image` (`image_id`, `section`, `name`, `content`, `url`, `status`, `description`, `date_create`, `date_modify`) VALUES
+(1, 0, 'Jakaś zajawka', '<p>...i co taka zajawka może oznaczać...</p>', 'dsc_9479-553351831e1535b59e410701eff888c9.jpg', 'on', 'Noc przy ognisku', '2019-11-16 09:34:01', '2019-11-16 10:06:02'),
+(2, 0, 'Tytuł drugiego slide\'u', '<p>tu też zajawka</p>', 'slide4-ec8c0836e4f3deadd07d30f8c0000e49.jpg', 'on', 'Kobieta patrzy na wprost, zielone oczy', '2019-11-16 10:06:33', '2019-11-16 10:34:34'),
+(3, 0, 'Slide 3', '<p>...i zajawka...</p>', 'slide3-5fc6d850a2dcedfb07537fdfc083be30.jpg', 'on', 'Kobieta patrzy w dół, czarne oczy', '2019-11-16 10:07:26', '2019-11-16 10:34:16'),
+(4, 1, 'Logo', '', 'logo-c554cc95b2cfb29325743f2600f0efc1.png', 'on', 'Logo 16-11-2019', '2019-11-16 10:37:10', '2019-11-16 10:44:14'),
+(5, 0, 'scroll down', '', 'scroll-a325cddac15192bbdd699761d6568d54.gif', 'on', 'Animowana ikona gif', '2019-11-17 21:18:25', '2019-11-17 21:29:40'),
+(6, 0, 'Logo min', '', 'logo-min-f99b085b37c17c85369453e12fe1ce38.png', 'on', 'Logo dla mniejszych ekranów (od \"-xl\")', '2019-11-18 19:20:13', '2019-11-18 19:26:18'),
+(7, 0, 'Hauraton', '', 'hauraton-e9976b2e028d77cf51444c809f1f0dce.png', 'on', NULL, '2019-11-23 21:08:12', '2019-11-23 21:08:12'),
+(8, 0, 'Homepark', '', 'homepark-5f89dec38d8f1dc16ed7f4730a2973d2.png', 'on', NULL, '2019-11-23 21:21:02', '2019-11-23 21:21:02'),
+(9, 0, 'Edukacja Inwestowania w Nieruchomości', '', 'hryn-532cd8c82ee595734a6e6da456de2006.png', 'on', '', '2019-11-23 21:21:15', '2019-11-23 21:22:16'),
+(10, 0, 'Nivona', '', 'nivona-1-969e35281bbab8b2573009e2dfc7105a.png', 'on', NULL, '2019-11-23 21:21:33', '2019-11-23 21:21:33'),
+(11, 0, 'Medicover', '', 'senior-1-365d6d735b06725ce7afa8c902f4d6ab.png', 'on', NULL, '2019-11-23 21:22:58', '2019-11-23 21:22:58'),
+(12, 0, 'Transkap', '', 'transkap-d1c857155e92dbdf45d4a0dbb23e4a3f.png', 'on', NULL, '2019-11-23 21:23:18', '2019-11-23 21:23:18'),
+(13, 0, 'RehaSport', '', 'reha-1-80179caaa1d905ccb20db9ace92277f3.png', 'on', NULL, '2019-11-23 21:35:36', '2019-11-23 21:35:36'),
+(14, 0, 'Mieszkanie', '', 'img_9678-1024x683-eaf1ca03c19161345ec20e8fa09a76fd.jpg', 'on', 'Stolik, szafa i krzesła', '2019-11-24 18:14:14', '2019-11-24 18:15:03'),
+(15, 0, 'RehaSport', '', 'img_0797-1024x629-df66c5aa268bc71a483b1822bbd444bf.jpg', 'on', 'trwa zabieg', '2019-11-24 18:32:51', '2019-11-24 18:33:10');
 
 --
 -- Wyzwalacze `im_image`
@@ -181,7 +202,23 @@ CREATE TABLE IF NOT EXISTS `im_label` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`label_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_label`
+--
+
+INSERT INTO `im_label` (`label_id`, `name`, `system_name`, `description`, `date_create`, `date_modify`) VALUES
+(1, 'Slider główny', 'slider', NULL, '2019-11-16 09:30:22', '2019-11-16 09:30:22'),
+(2, 'Logo', 'logo', NULL, '2019-11-16 10:37:58', '2019-11-16 10:37:58'),
+(3, 'Menu', 'menu', NULL, '2019-11-17 10:05:13', '2019-11-17 10:05:13'),
+(4, 'Prawe menu (hamburger)', 'right-menu', NULL, '2019-11-17 15:45:30', '2019-11-17 15:45:30'),
+(5, 'Ikona \"scroll down\"', 'icon-scroll-down', NULL, '2019-11-17 21:15:21', '2019-11-17 21:15:21'),
+(6, 'Zaufali nam', 'trust', NULL, '2019-11-23 10:26:44', '2019-11-23 10:26:44'),
+(8, 'Treść sekcji', 'content', NULL, '2019-11-23 10:51:40', '2019-11-23 10:51:40'),
+(9, 'Tytuł poniżej content', 'after-content-title', NULL, '2019-11-24 10:37:11', '2019-11-24 10:37:11'),
+(10, 'Formularz kontaktowy', 'form', NULL, '2019-11-24 17:45:05', '2019-11-24 17:45:05'),
+(11, 'Stopka', 'footer', NULL, '2019-11-24 17:56:52', '2019-11-24 17:56:52');
 
 --
 -- Wyzwalacze `im_label`
@@ -219,7 +256,14 @@ CREATE TABLE IF NOT EXISTS `im_label_section` (
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`label_section_id`),
   KEY `label_id` (`label_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_label_section`
+--
+
+INSERT INTO `im_label_section` (`label_section_id`, `label_id`, `section`, `class`, `description`, `date_create`, `date_modify`) VALUES
+(1, 5, 0, 'd-none d-md-block w-100 text-center', '', '2019-11-17 21:32:09', '2019-11-18 19:36:15');
 
 --
 -- Wyzwalacze `im_label_section`
@@ -354,7 +398,32 @@ CREATE TABLE IF NOT EXISTS `im_object` (
   PRIMARY KEY (`object_id`),
   KEY `type_id` (`type_id`),
   KEY `label_id` (`label_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_object`
+--
+
+INSERT INTO `im_object` (`object_id`, `type_id`, `label_id`, `section`, `system_name`, `name`, `content`, `link`, `email`, `form`, `icon`, `position`, `status`, `description`, `date`, `date_create`, `date_modify`) VALUES
+(1, 1, 1, 0, 'Slider główny', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-16', '2019-11-16 09:32:24', '2019-11-16 10:33:25'),
+(2, 2, 2, 0, 'Logo', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-16', '2019-11-16 10:38:16', '2019-11-17 20:10:59'),
+(3, 3, 3, 0, 'Menu', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 10:05:53', '2019-11-17 20:09:19'),
+(4, 4, 4, 0, 'Portfolio 1', 'Portfolio 1', '<p>Portfolio 1</p>', '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 15:49:17', '2019-11-24 18:32:04'),
+(5, 5, 5, 0, 'Obraz gif', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-17', '2019-11-17 21:17:32', '2019-11-17 21:19:43'),
+(6, 6, 2, 0, 'Logo mobile', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-18', '2019-11-18 19:24:55', '2019-11-18 19:27:50'),
+(7, 9, 8, 0, 'Nasza wizja', '', '<div class=\"title\">Our vision</div>\r\n<div class=\"text\">This is an abstract of our key services Making films isn&rsquo;t just something we do. We aim to create perfect audio-visual symphonies, integrated in stories which evoke real emotions. Our entire team is one big family and maintaining a collaborative spirit is at the core of everything we do. MoonPhase Studio stands for authenticity, and this inevitably transfers to the results of our work. We are prepared to take a risk, and we&rsquo;re genuinely excited to bring stories, characters and brands to life. Because a good story will stay with you long after the credits roll.</div>', '', '', '', '', 1, 'on', '', '2019-11-23', '2019-11-23 10:54:01', '2019-11-23 11:04:50'),
+(8, 7, 6, 0, 'Hauraton', '', NULL, '', '', '', '', 1, 'on', '', '2019-11-23', '2019-11-23 21:07:42', '2019-11-23 21:08:34'),
+(9, 7, 6, 0, 'Homepark', '', NULL, '', '', '', '', 2, 'on', '', '2019-11-23', '2019-11-23 21:23:49', '2019-11-23 21:25:49'),
+(10, 7, 6, 0, 'Edukacja Inwestowania w Nieruchomości', '', NULL, '', '', '', '', 3, 'on', '', '2019-11-23', '2019-11-23 21:24:10', '2019-11-23 21:27:19'),
+(11, 7, 6, 0, 'Nivona', '', NULL, '', '', '', '', 4, 'on', '', '2019-11-23', '2019-11-23 21:24:29', '2019-11-23 21:27:32'),
+(12, 7, 6, 0, 'Medicover', '', NULL, '', '', '', '', 5, 'on', '', '2019-11-23', '2019-11-23 21:25:09', '2019-11-23 21:27:44'),
+(13, 7, 6, 0, 'Transkap', '', NULL, '', '', '', '', 6, 'on', '', '2019-11-23', '2019-11-23 21:25:32', '2019-11-23 21:27:57'),
+(14, 7, 6, 0, 'RehaSport', '', NULL, '', '', '', '', 7, 'on', '', '2019-11-23', '2019-11-23 21:34:36', '2019-11-23 21:35:56'),
+(15, 7, 6, 0, 'Nivona2', '', NULL, '', '', '', '', 8, 'on', '', '2019-11-24', '2019-11-24 10:36:10', '2019-11-24 10:43:59'),
+(16, 10, 9, 0, 'Zaufali nam', 'Zaufali nam', NULL, '', '', '', '', 1, 'on', '', '2019-11-24', '2019-11-24 10:38:21', '2019-11-24 10:38:35'),
+(17, 11, 10, 0, 'Formularz kontaktowy', 'Skontaktuj się z nami', NULL, '', '', 'damian.krawiec@gmail.com', '', 1, 'on', '', '2019-11-24', '2019-11-24 17:51:29', '2019-11-24 20:21:30'),
+(18, 12, 11, 0, 'Treść stopki', '', '<p>Wszelkie prawa zastrzeżone - MoonPhaseStudio 2019</p>\r\n<p>treść stopki...</p>', '', '', '', '', 1, 'on', '', '2019-11-24', '2019-11-24 17:57:34', '2019-11-24 18:02:54'),
+(19, 4, 4, 0, 'Portfolio 2', 'Portfolio 2', NULL, '', '', '', '', 2, 'on', '', '2019-11-24', '2019-11-24 18:31:29', '2019-11-24 18:36:46');
 
 --
 -- Wyzwalacze `im_object`
@@ -428,7 +497,29 @@ CREATE TABLE IF NOT EXISTS `im_object_image` (
   PRIMARY KEY (`object_image_id`),
   KEY `object_id` (`object_id`),
   KEY `image_id` (`image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_object_image`
+--
+
+INSERT INTO `im_object_image` (`object_image_id`, `object_id`, `image_id`, `position`) VALUES
+(15, 1, 1, 0),
+(16, 1, 2, 0),
+(17, 1, 3, 0),
+(19, 2, 4, 0),
+(21, 5, 5, 0),
+(23, 6, 6, 0),
+(24, 8, 7, 0),
+(25, 9, 8, 0),
+(26, 10, 9, 0),
+(27, 11, 10, 0),
+(28, 12, 11, 0),
+(29, 13, 12, 0),
+(30, 14, 13, 0),
+(32, 15, 10, 0),
+(34, 4, 14, 0),
+(36, 19, 14, 0);
 
 -- --------------------------------------------------------
 
@@ -521,14 +612,19 @@ CREATE TABLE IF NOT EXISTS `im_section` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`section_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_section`
 --
 
 INSERT INTO `im_section` (`section_id`, `parent`, `name`, `name_url`, `meta`, `icon`, `position`, `status`, `description`, `date_create`, `date_modify`) VALUES
-(1, 0, 'Strona główna', 'strona-glowna', 'Opis strony głownej', 'fal fa-home', 1, 'on', '', '2019-11-14 21:28:52', '2019-11-14 21:28:52');
+(1, 0, 'HOME', 'home', 'Opis strony głownej', '', 1, 'on', '', '2019-11-14 21:28:52', '2019-11-23 09:51:18'),
+(2, 0, 'O NAS', 'o-nas', '', '', 2, 'on', '', '2019-11-17 10:07:28', '2019-11-23 09:51:34'),
+(3, 0, 'OFERTA/PORTFOLIO', 'oferta-portfolio', '', 'fal fa-camera-retro', 3, 'on', '', '2019-11-17 10:07:54', '2019-11-17 20:31:28'),
+(4, 0, 'KONTAKT', 'kontakt', '', 'fal fa-map-marked-alt', 4, 'off', '', '2019-11-17 15:10:28', '2019-11-18 19:16:10'),
+(5, 0, 'Hamburger', 'hamburger', '', 'fal fa-bars', 6, 'on', 'Ikona do wysuwanego z prawej strony menu', '2019-11-17 15:20:51', '2019-11-18 19:51:35'),
+(6, 0, 'BLOG', 'blog', '', '', 5, 'on', '', '2019-11-17 20:02:47', '2019-11-23 09:51:56');
 
 --
 -- Wyzwalacze `im_section`
@@ -563,7 +659,40 @@ CREATE TABLE IF NOT EXISTS `im_section_object` (
   PRIMARY KEY (`section_object_id`),
   KEY `section_id` (`section_id`),
   KEY `object_id` (`object_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_section_object`
+--
+
+INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`) VALUES
+(10, 1, 1),
+(17, 1, 3),
+(18, 2, 3),
+(19, 3, 3),
+(20, 4, 3),
+(21, 6, 3),
+(22, 1, 2),
+(23, 2, 2),
+(24, 3, 2),
+(25, 4, 2),
+(26, 6, 2),
+(83, 1, 5),
+(84, 1, 6),
+(96, 1, 7),
+(107, 1, 8),
+(108, 1, 9),
+(109, 1, 10),
+(110, 1, 11),
+(111, 1, 12),
+(112, 1, 13),
+(114, 1, 14),
+(116, 1, 16),
+(117, 1, 15),
+(120, 1, 18),
+(125, 1, 4),
+(127, 1, 19),
+(128, 1, 17);
 
 -- --------------------------------------------------------
 
@@ -730,7 +859,24 @@ CREATE TABLE IF NOT EXISTS `im_type` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_type`
+--
+
+INSERT INTO `im_type` (`type_id`, `name`, `class`, `description`, `date_create`, `date_modify`) VALUES
+(1, 'Slider główny', '', NULL, '2019-11-16 09:30:44', '2019-11-16 09:30:44'),
+(2, 'Logo', '', NULL, '2019-11-16 10:37:46', '2019-11-16 10:37:46'),
+(3, 'Menu', '', NULL, '2019-11-17 10:05:27', '2019-11-17 10:05:27'),
+(4, 'Prawe menu (hamburger)', 'col-12 col-xl-6', '', '2019-11-17 15:48:19', '2019-11-24 18:44:04'),
+(5, 'Ikona \"scroll down\"', '', '', '2019-11-17 21:16:43', '2019-11-18 09:45:29'),
+(6, 'Logo mobile', ' logo-min', '', '2019-11-18 19:23:42', '2019-11-23 10:13:52'),
+(7, 'Zaufali nam', 'col-12 col-lg-6 col-xl-3 text-center', '', '2019-11-23 10:26:57', '2019-11-24 10:35:55'),
+(9, 'Treść sekcji', '', '', '2019-11-23 10:51:52', '2019-11-23 21:15:58'),
+(10, 'Nazwa', 'col-12 text-center', '', '2019-11-24 10:37:42', '2019-11-24 10:39:10'),
+(11, 'Formularz kontaktowy', 'col-12', '', '2019-11-24 17:51:01', '2019-11-24 17:55:03'),
+(12, 'Stopka', 'col-12 text-center pt-5', '', '2019-11-24 17:57:01', '2019-11-24 17:59:26');
 
 --
 -- Wyzwalacze `im_type`
@@ -771,7 +917,26 @@ CREATE TABLE IF NOT EXISTS `im_type_property` (
   PRIMARY KEY (`type_property_id`),
   KEY `type_id` (`type_id`),
   KEY `property_id` (`property_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `im_type_property`
+--
+
+INSERT INTO `im_type_property` (`type_property_id`, `type_id`, `property_id`, `class`, `class_field`, `position`, `description`, `date_create`, `date_modify`) VALUES
+(1, 1, 4, 'col-12', '', 1, '', '2019-11-16 09:30:52', '2019-11-16 09:31:10'),
+(2, 2, 4, 'animated rotateIn d-none d-xl-block', '', 1, '', '2019-11-16 10:38:06', '2019-11-18 19:23:05'),
+(3, 3, 7, '', 'navbar navbar-expand-lg navbar-dark', 1, '', '2019-11-17 10:05:38', '2019-11-18 19:08:52'),
+(6, 5, 4, '', '', 1, '', '2019-11-17 21:16:59', '2019-11-17 21:21:06'),
+(7, 6, 4, 'animated rotateIn d-xl-none', '', 1, '', '2019-11-18 19:24:12', '2019-11-23 10:13:44'),
+(9, 7, 4, 'w-100', '', 1, '', '2019-11-23 10:52:35', '2019-11-24 09:17:00'),
+(10, 9, 2, '', '', 1, NULL, '2019-11-23 10:53:35', '2019-11-23 10:53:35'),
+(11, 4, 1, 'col-12 text-center', '', 2, '', '2019-11-23 11:16:38', '2019-11-24 18:19:15'),
+(12, 10, 1, 'w-100 text-dark', '', 1, '', '2019-11-24 10:38:04', '2019-11-24 10:40:18'),
+(13, 11, 10, 'col-12 p-5', '', 2, '', '2019-11-24 17:51:09', '2019-11-24 20:21:14'),
+(14, 12, 2, 'w-100', '', 1, '', '2019-11-24 17:57:19', '2019-11-24 17:58:58'),
+(15, 4, 4, 'col-12', '', 1, '', '2019-11-24 18:11:36', '2019-11-24 18:16:03'),
+(16, 11, 1, 'col-12 text-center form-title', '', 1, '', '2019-11-24 20:21:09', '2019-11-24 20:23:54');
 
 --
 -- Wyzwalacze `im_type_property`

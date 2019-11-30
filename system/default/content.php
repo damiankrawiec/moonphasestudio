@@ -76,7 +76,15 @@ $label = $object->getAllLabel();
 
     </div>
 
-    <?php $object->display($sectionId, $label['footer']); ?>
+    <div class="im-footer">
+
+        <?php $object->display($sectionId, $label['company-data-footer'], 'begin'); ?>
+
+        <?php $object->display($sectionId, $label['site-map-footer']); ?>
+
+        <?php $object->display($sectionId, $label['footer-content'], 'end'); ?>
+
+    </div>
 
 </div>
 
