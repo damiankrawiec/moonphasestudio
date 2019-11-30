@@ -45,6 +45,8 @@ $label = $object->getAllLabel();
     <!-- Animated icon -->
     <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
 
+    <?php $object->display($sectionId, $label['before-content-title']); ?>
+
     <?php $object->display($sectionId, $label['content']); ?>
 
     <?php $object->display($sectionId, $label['after-content-title']); ?>
@@ -62,7 +64,7 @@ $label = $object->getAllLabel();
             //Name of files may only string section - check in foreach(dir) and stristr()
             $object->displayStatic($sectionId);
 
-            //home - Google Maps (API)
+            //home, kontakt - Google Maps (API)
 
             ?>
 
@@ -71,6 +73,8 @@ $label = $object->getAllLabel();
         <div class="col-12 col-lg-6">
 
             <?php $object->display($sectionId, $label['form']); ?>
+
+            <?php $object->display($sectionId, $label['company-data-content']); ?>
 
         </div>
 
