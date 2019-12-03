@@ -5,7 +5,9 @@ require_once 'content/object/object.class.php';
 
 $object = new ObjectContent($this->systemName(), $db, $this->currentLanguage, $this->admin);
 
-$sectionId = $this->getSection()->id;
+$sectionData = $this->getSection();
+
+$sectionId = $sectionData->id;
 
 $label = $object->getAllLabel();
 
@@ -21,18 +23,16 @@ $label = $object->getAllLabel();
     </div>
 </div>
 -->
-
-<div class="container-fluid im-content">
+<div class="<?php echo (!isset($sectionData->class) ? 'container' : $sectionData->class) ?> im-content">
 
     <?php
-
-    //
 
     //Option:
     //    //- parent (to section field, show child sections of current section)
     //    //- begin, end (must be together) - connected 2 or more label group in one row
     //    //- pagination always with :X on the right (number of objects show on one page of paging)
     //    //- submenu show section name and his children via dropdown
+    //    //- scroll insert a scroll tag (animate scrolling)
 
     ?>
 
@@ -47,11 +47,11 @@ $label = $object->getAllLabel();
 
     <?php $object->display($sectionId, $label['before-content-title']); ?>
 
-    <?php $object->display($sectionId, $label['content']); ?>
+    <?php $object->display($sectionId, $label['content'], 'scroll'); ?>
 
     <?php $object->display($sectionId, $label['after-content-title']); ?>
 
-    <?php $object->display($sectionId, $label['trust'], 'pagination:4'); ?>
+    <?php $object->display($sectionId, $label['trust'], 'pagination:4,scroll'); ?>
 
     <div class="row">
 

@@ -206,7 +206,7 @@ function move($direction, $paginationData) {
 
         });
 
-        //$('#scroll-top').trigger('click');
+        $('#scroll-top').trigger('click');
 
     }
 
@@ -254,15 +254,45 @@ function scrollEvent() {
 
     var $window = $(window);
 
+    var $position = $window.scrollTop();
+
+    var $direction = '';
+
     $window.scroll(function() {
 
-        if($window.scrollTop() > 300){
+        var $scroll = $window.scrollTop();
+
+        if($scroll > 300) {
 
             $('#scroll-top').fadeIn();
 
         }else{
 
             $('#scroll-top').fadeOut();
+
+        }
+
+        if($('.scroll').length > 0) {
+
+            if ($scroll > $position) {
+
+                $direction = 'down';
+
+            } else {
+
+                $direction = 'up';
+
+            }
+
+            $position = $scroll;
+
+            clearTimeout($.data(this, 'scrollTimer'));
+
+            $.data(this, 'scrollTimer', setTimeout(function () {
+
+                nextScroll(labelScroll(), $position, $direction);
+
+            }, 250));
 
         }
 
@@ -304,5 +334,67 @@ function gallery() {
 function datepicker() {
 
     $('.datepicker-here').datepicker();
+
+}
+function nextScroll($scrollArray, $currentTop, $direction, $correct) {
+
+    var $scrollCount = $scrollArray.length;
+
+    if($scrollCount > 0 && $currentTop > 0) {
+
+        var $nextUp = 0;
+        var $nextDown = 0;
+        for ($i = 0; $i < $scrollCount; $i++) {
+
+            if ($scrollArray[$i] < $currentTop) {
+
+                $nextUp = $scrollArray[$i];
+
+            }
+
+            if ($scrollArray[$i] > $currentTop && $nextDown === 0) {
+
+                $nextDown = $scrollArray[$i];
+
+            }
+
+        }
+
+        if($direction === 'up')
+            $directionLabel = 0;
+
+        if($direction === 'down')
+            $directionLabel = $nextDown;
+
+        if($directionLabel > 0) {
+
+            $('html').animate({
+                scrollTop: $directionLabel
+            }, 500, function () {
+
+                $('html').stop();
+
+            });
+
+        };
+
+    }
+
+}
+function labelScroll() {
+
+    var $labelScroll = [];
+
+    $('body .scroll').each(function () {
+
+        var $this = $(this);
+
+        var $offset = $this.offset();
+
+        $labelScroll.push($offset.top);
+
+    });
+
+    return $labelScroll;
 
 }
