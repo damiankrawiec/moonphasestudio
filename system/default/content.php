@@ -23,68 +23,82 @@ $label = $object->getAllLabel();
     </div>
 </div>
 -->
-<div class="<?php echo (!isset($sectionData->class) ? 'container' : $sectionData->class) ?> im-content">
+<div class="im-content">
 
-    <?php
+    <div class="container-fluid">
 
-    //Option:
-    //    //- parent (to section field, show child sections of current section)
-    //    //- begin, end (must be together) - connected 2 or more label group in one row
-    //    //- pagination always with :X on the right (number of objects show on one page of paging)
-    //    //- submenu show section name and his children via dropdown
-    //    //- scroll insert a scroll tag (animate scrolling)
+        <?php $object->display($sectionId, $label['logo']); ?>
 
-    ?>
+        <?php $object->display($sectionId, $label['menu']); ?>
 
-    <?php $object->display($sectionId, $label['logo']); ?>
+    </div>
 
-    <?php $object->display($sectionId, $label['menu']); ?>
+    <div class="<?php echo (!isset($sectionData->class) ? 'container' : $sectionData->class) ?>">
 
-    <?php $object->display($sectionId, $label['slider']); ?>
+        <?php
 
-    <!-- Animated icon -->
-    <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
+        //Option:
+        //    //- parent (to section field, show child sections of current section)
+        //    //- begin, end (must be together) - connected 2 or more label group in one row
+        //    //- pagination always with :X on the right (number of objects show on one page of paging)
+        //    //- submenu show section name and his children via dropdown
+        //    //- scroll insert a scroll tag (animate scrolling)
 
-    <?php $object->display($sectionId, $label['before-content-title']); ?>
+        ?>
 
-    <?php $object->display($sectionId, $label['content'], 'scroll'); ?>
+        <?php $object->display($sectionId, $label['slider']); ?>
 
-    <?php $object->display($sectionId, $label['after-content-title']); ?>
+        <!-- Animated icon -->
+        <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
 
-    <?php $object->display($sectionId, $label['trust'], 'pagination:4,scroll'); ?>
+        <?php $object->display($sectionId, $label['before-content-title']); ?>
 
-    <div class="row">
+        <?php $object->display($sectionId, $label['content'], 'scroll'); ?>
 
-        <div class="col-12 col-lg-6">
+        <?php $object->display($sectionId, $label['blog']); ?>
 
-            <?php
+        <?php $object->display($sectionId, $label['after-content-title']); ?>
 
-            //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
-            //In static file should be defined class, rows, col, etc. - content fix to rest page box
-            //Name of files may only string section - check in foreach(dir) and stristr()
-            $object->displayStatic($sectionId);
+        <?php $object->display($sectionId, $label['trust'], 'pagination:4,scroll'); ?>
 
-            //home, kontakt - Google Maps (API)
+        <div class="row">
 
-            ?>
+            <div class="col-12 col-lg-6">
 
-        </div>
+                <?php
 
-        <div class="col-12 col-lg-6">
+                //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
+                //In static file should be defined class, rows, col, etc. - content fix to rest page box
+                //Name of files may only string section - check in foreach(dir) and stristr()
+                $object->displayStatic($sectionId);
 
-            <?php $object->display($sectionId, $label['next-map']); ?>
+                //home, kontakt - Google Maps (API)
+
+                ?>
+
+            </div>
+
+            <div class="col-12 col-lg-6">
+
+                <?php $object->display($sectionId, $label['next-map']); ?>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="im-footer">
+    <div class="container-fluid">
 
-        <?php $object->display($sectionId, $label['footer-left'], 'begin'); ?>
+        <div class="im-footer">
 
-        <?php $object->display($sectionId, $label['footer-right'], 'end'); ?>
+            <?php $object->display($sectionId, $label['footer-left'], 'begin'); ?>
 
-        <?php $object->display($sectionId, $label['footer-bottom']); ?>
+            <?php $object->display($sectionId, $label['footer-right'], 'end'); ?>
+
+            <?php $object->display($sectionId, $label['footer-bottom']); ?>
+
+        </div>
 
     </div>
 

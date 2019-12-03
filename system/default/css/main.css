@@ -289,6 +289,14 @@ input.form-control {
 .footer-bottom a {
   color: #d7af69;
 }
+.objects.blog .object {
+  padding: 20px 50px 20px;
+  border: 2px solid #fff;
+  line-height: 28px;
+}
+.objects.blog .object .carousel-caption {
+  display: none !important;
+}
 @media (max-width: 1800px) {
   .trust {
     padding-left: 50px;

@@ -89,4 +89,10 @@ $(function(){
 
     appendMenuIcon($('.menu li.active'));
 
+    if($('.portfolio').length > 0) {
+
+        $('.menu li:last-child').hide();
+
+    }
+
 });
