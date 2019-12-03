@@ -7,8 +7,6 @@ $object = new ObjectContent($this->systemName(), $db, $this->currentLanguage, $t
 
 $sectionData = $this->getSection();
 
-$sectionId = $sectionData->id;
-
 $label = $object->getAllLabel();
 
 ?>
@@ -27,9 +25,9 @@ $label = $object->getAllLabel();
 
     <div class="container-fluid">
 
-        <?php $object->display($sectionId, $label['logo']); ?>
+        <?php $object->display($sectionData->id, $label['logo']); ?>
 
-        <?php $object->display($sectionId, $label['menu']); ?>
+        <?php $object->display($sectionData->id, $label['menu']); ?>
 
     </div>
 
@@ -46,20 +44,20 @@ $label = $object->getAllLabel();
 
         ?>
 
-        <?php $object->display($sectionId, $label['slider']); ?>
+        <?php $object->display($sectionData->id, $label['slider']); ?>
 
         <!-- Animated icon -->
-        <?php $object->display($sectionId, $label['icon-scroll-down']); ?>
+        <?php $object->display($sectionData->id, $label['icon-scroll-down']); ?>
 
-        <?php $object->display($sectionId, $label['before-content-title']); ?>
+        <?php $object->display($sectionData->id, $label['before-content-title']); ?>
 
-        <?php $object->display($sectionId, $label['content'], 'scroll'); ?>
+        <?php $object->display($sectionData->id, $label['content'], 'scroll'); ?>
 
-        <?php $object->display($sectionId, $label['blog']); ?>
+        <?php $object->display($sectionData->id, $label['blog']); ?>
 
-        <?php $object->display($sectionId, $label['after-content-title']); ?>
+        <?php $object->display($sectionData->id, $label['after-content-title']); ?>
 
-        <?php $object->display($sectionId, $label['trust'], 'pagination:4,scroll'); ?>
+        <?php $object->display($sectionData->id, $label['trust'], 'pagination:4,scroll'); ?>
 
         <div class="row">
 
@@ -70,7 +68,7 @@ $label = $object->getAllLabel();
                 //Static content (when in system is "static" dir, and file is named like current url section) - if both are false static content is not display
                 //In static file should be defined class, rows, col, etc. - content fix to rest page box
                 //Name of files may only string section - check in foreach(dir) and stristr()
-                $object->displayStatic($sectionId);
+                $object->displayStatic($sectionData->id);
 
                 //home, kontakt - Google Maps (API)
 
@@ -80,7 +78,7 @@ $label = $object->getAllLabel();
 
             <div class="col-12 col-lg-6">
 
-                <?php $object->display($sectionId, $label['next-map']); ?>
+                <?php $object->display($sectionData->id, $label['next-map']); ?>
 
             </div>
 
@@ -92,11 +90,11 @@ $label = $object->getAllLabel();
 
         <div class="im-footer">
 
-            <?php $object->display($sectionId, $label['footer-left'], 'begin'); ?>
+            <?php $object->display($sectionData->id, $label['footer-left'], 'begin'); ?>
 
-            <?php $object->display($sectionId, $label['footer-right'], 'end'); ?>
+            <?php $object->display($sectionData->id, $label['footer-right'], 'end'); ?>
 
-            <?php $object->display($sectionId, $label['footer-bottom']); ?>
+            <?php $object->display($sectionData->id, $label['footer-bottom']); ?>
 
         </div>
 
@@ -106,6 +104,6 @@ $label = $object->getAllLabel();
 
 <div class="right-menu-box">
 
-    <?php $object->display($sectionId, $label['right-menu']); ?>
+    <?php $object->display($sectionData->id, $label['right-menu']); ?>
 
 </div>
