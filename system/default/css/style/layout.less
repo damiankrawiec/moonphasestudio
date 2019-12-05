@@ -55,222 +55,255 @@
     margin: -7px;
   }
   overflow: hidden;
+  p{
+    i {
+      font-size: 17px;
+    }
+  }
 }
 .menu, .logo{
-  position: absolute;
-  z-index: 2;
+position: absolute;
+z-index: 2;
 }
 .logo{
-  top: 50px;
-  left: 80px;
-  .carousel-caption{
-    display: none !important;
-  }
+top: 50px;
+left: 80px;
+.carousel-caption{
+  display: none !important;
+}
 }
 .logo-min{
-  position: relative;
+position: relative;
 }
 .right-menu-box{
-  width: 0%;
-  height: 100%;
-  background: @accent;
-  z-index: 3;
-  position: fixed;
-  right: 0;
-  top: 0;
-  .right-menu{
-    display: none;
-    padding: 15px;
-    .no-data, .carousel-caption{
-      display: none !important;
-    }
-    .object{
-      img{
-        border: 5px solid @white;
-      }
+width: 0%;
+height: 100%;
+background: @accent;
+z-index: 3;
+position: fixed;
+right: 0;
+top: 0;
+.right-menu{
+  display: none;
+  padding: 15px;
+  .no-data, .carousel-caption{
+    display: none !important;
+  }
+  .object{
+    img{
+      border: 5px solid @white;
     }
   }
 }
+}
 .menu{
-  top: 35px;
-  right: 80px;
-  a{
-    color: @white;
+top: 35px;
+right: 80px;
+a{
+  color: @white;
+  font-size: 16px;
+  i.translation{
     font-size: 16px;
   }
-  li{
-    .active-arrow {
-      width: 100%;
+}
+li{
+  .active-arrow {
+    width: 100%;
+    text-align: center;
+    i {
+      font-size: 22px;
       text-align: center;
-      i {
-        font-size: 26px;
-        text-align: center;
-        position: relative;
-        top: -8px;
-        color: @accent;
-      }
-    }
-  }
-  li.active{
-    a {
+      position: relative;
+      top: -8px;
       color: @accent;
     }
   }
-  .navbar-nav{
-    li:last-child{
-      width: 30px;
-      i{
-        font-size: 24px;
-        padding-top: 1px
-      }
+}
+li.active{
+  a {
+    color: @accent;
+  }
+}
+.navbar-nav{
+  li:last-child{
+    width: 30px;
+    i{
+      font-size: 24px;
+      padding-top: 1px
     }
   }
-  #im_section-name-5{
-    display: none;
-  }
+}
+#im_section-name-5{
+  display: none;
+}
 }
 .icon-scroll-down{
-  position: relative;
-  color: @white;
-  top: 120px;
-  div{
-    width: 100%;
-    img{
-      width: 150px;
-      opacity: 0.1;
-    }
-  }
-  .object{
-    position: absolute;
-    top: -400px;
-    margin-left: 30px;
-    h5{
-      display: none;
-    }
-  }
-}
-#process, #scroll-top{
-  color: @accent;
-}
-#scroll-top{
-  background: @white;
-  padding: 7px;
-  opacity: 0.7;
-  z-index: 3;
-}
-.fixed-menu{
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: @black;
-  padding-left: 33px;
+position: relative;
+color: @white;
+top: 120px;
+div{
   width: 100%;
-  z-index: 20;
-}
-.content{
-  padding: 50px 15% 150px;
-  text-align: center;
-  line-height: 50px;
-  text-transform: uppercase;
-  .title{
-    color: @accent;
-    font-size: 46px;
-    width: border-box;
-    padding: 50px 0 50px;
-  }
-  .text{
-    font-size: 26px;
-  }
-}
-.before-content-title{
-  padding: 180px 0 100px;
-  font-size: 40px;
-  color: @white !important;
-}
-.after-content-title{
-  margin-bottom: -110px;
-  font-size: 40px;
-}
-.trust{
-  padding: 150px 250px 100px;
-  background-color: @white;
-  .carousel-item{
-    padding: 20px;
-  }
-  .carousel-caption{
-    display: none !important;
-  }
-  .pagination-arrow{
-    color: @black;
-  }
   img{
-    width: auto;
+    width: 150px;
+    opacity: 0.1;
   }
 }
-.form-title{
-    padding-top: 42px;
-    font-size: 32px;
-  }
-.contact-form{
-  img{
-    float: left;
-  }
-}
-.im-send{
-  background: none;
-  .border-radius(0);
-  color: @white;
-  font-size: 16px;
-  padding: 12px;
-  margin: 0 10px 0;
-  float: left;
-}
-.next-map, .footer-left, .footer-right {
-  a {
-    font-size: 16px !important;
-    color: @white;
-  }
-  i.fal {
-    color: @accent;
-    font-size: 20px;
-  }
-}
-.company-data{
-  padding: 20px;
-  line-height: 30px;
-  .carousel-caption{
-    display: none !important;
-  }
-  img{
-    width: auto;
-    padding-bottom: 20px;
-  }
-}
-.footer-right{
-  padding: 40px;
-  .navbar-nav li:last-child {
+.object{
+  position: absolute;
+  top: -400px;
+  margin-left: 30px;
+  h5{
     display: none;
   }
-  .site-map-title{
-    padding-bottom: 20px;
-    i{
-      font-size: 28px;
-    }
+}
+}
+#process, #scroll-top{
+color: @accent;
+}
+#scroll-top{
+background: @white;
+padding: 7px;
+opacity: 0.7;
+z-index: 3;
+}
+.fixed-menu{
+position: fixed;
+top: 0;
+left: 0;
+background: @black;
+padding-left: 33px;
+width: 100%;
+z-index: 20;
+}
+.content{
+padding: 50px 15% 150px;
+text-align: center;
+line-height: 50px;
+text-transform: uppercase;
+.title{
+  color: @accent;
+  font-size: 46px;
+  width: border-box;
+  padding: 50px 0 50px;
+}
+.text{
+  font-size: 26px;
+}
+}
+.before-content-title{
+padding: 180px 0 100px;
+color: @white !important;
+}
+.before-content-title, .after-content-title{
+i.translation {
+  font-size: 30px;
+}
+}
+.after-content-title{
+margin-bottom: -80px;
+font-size: 40px;
+}
+.trust{
+padding: 100px 250px 50px;
+background-color: @white;
+.carousel-item{
+  padding: 20px;
+}
+.carousel-caption{
+  display: none !important;
+}
+.pagination-arrow{
+  color: @black;
+}
+img{
+  width: auto;
+}
+}
+.form-title{
+  padding-top: 42px;
+  i {
+    font-size: 24px;
   }
 }
-.footer-bottom{
-  padding-top: 20px;
-  a{
-    color: @accent;
+.contact-form{
+img{
+  float: left;
+}
+}
+.im-send{
+background: none;
+.border-radius(0);
+color: @white;
+font-size: 16px;
+padding: 12px;
+margin: 0 10px 0;
+float: left;
+}
+.next-map, .footer-left, .footer-right {
+a {
+  font-size: 16px !important;
+  color: @white;
+}
+i.fal {
+  color: @accent;
+  font-size: 20px;
+}
+}
+.company-data{
+padding: 20px;
+line-height: 30px;
+.carousel-caption{
+  display: none !important;
+}
+img{
+  width: auto;
+  padding-bottom: 20px;
+}
+}
+.footer-right{
+padding: 12px;
+.navbar-nav li:last-child {
+  display: none;
+}
+.site-map-title{
+  padding-bottom: 20px;
+  i{
+    font-size: 28px;
   }
+}
+}
+.footer-bottom{
+padding-top: 20px;
+a{
+  color: @accent;
+}
+img{
+  width: 200px;
+  margin-bottom: 6px;
+}
+.carousel-caption{
+  display: none !important;
+}
 }
 .objects.blog{
   .object{
     padding: 20px 50px 20px;
-    border: 2px solid @white;
+    border: 7px solid @black;
+    background-color: @white;
     line-height: 28px;
     .carousel-caption{
       display: none !important;
+    }
+    i, .blog-date{
+      color: @dark;
+    }
+    i.fad, i.fal{
+      font-size: 18px;
+    }
+    .h3{
+      i{
+        font-size: 20px;
+      }
     }
   }
 }

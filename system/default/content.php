@@ -51,13 +51,13 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionData->id, $label['before-content-title']); ?>
 
-        <?php $object->display($sectionData->id, $label['content'], 'scroll'); ?>
+        <?php $object->display($sectionData->id, $label['content']); ?>
 
         <?php $object->display($sectionData->id, $label['blog']); ?>
 
         <?php $object->display($sectionData->id, $label['after-content-title']); ?>
 
-        <?php $object->display($sectionData->id, $label['trust'], 'pagination:4,scroll'); ?>
+        <?php $object->display($sectionData->id, $label['trust'], 'pagination:4'); ?>
 
         <div class="row">
 

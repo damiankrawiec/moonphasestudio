@@ -84,6 +84,9 @@ input.form-control {
 .slider .row {
   margin: -7px;
 }
+.slider p i {
+  font-size: 17px;
+}
 .menu,
 .logo {
   position: absolute;
@@ -127,12 +130,15 @@ input.form-control {
   color: #fff;
   font-size: 16px;
 }
+.menu a i.translation {
+  font-size: 16px;
+}
 .menu li .active-arrow {
   width: 100%;
   text-align: center;
 }
 .menu li .active-arrow i {
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
   position: relative;
   top: -8px;
@@ -207,15 +213,18 @@ input.form-control {
 }
 .before-content-title {
   padding: 180px 0 100px;
-  font-size: 40px;
   color: #fff !important;
 }
+.before-content-title i.translation,
+.after-content-title i.translation {
+  font-size: 30px;
+}
 .after-content-title {
-  margin-bottom: -110px;
+  margin-bottom: -80px;
   font-size: 40px;
 }
 .trust {
-  padding: 150px 250px 100px;
+  padding: 100px 250px 50px;
   background-color: #fff;
 }
 .trust .carousel-item {
@@ -232,7 +241,9 @@ input.form-control {
 }
 .form-title {
   padding-top: 42px;
-  font-size: 32px;
+}
+.form-title i {
+  font-size: 24px;
 }
 .contact-form img {
   float: left;
@@ -272,7 +283,7 @@ input.form-control {
   padding-bottom: 20px;
 }
 .footer-right {
-  padding: 40px;
+  padding: 12px;
 }
 .footer-right .navbar-nav li:last-child {
   display: none;
@@ -289,13 +300,32 @@ input.form-control {
 .footer-bottom a {
   color: #d7af69;
 }
+.footer-bottom img {
+  width: 200px;
+  margin-bottom: 6px;
+}
+.footer-bottom .carousel-caption {
+  display: none !important;
+}
 .objects.blog .object {
   padding: 20px 50px 20px;
-  border: 2px solid #fff;
+  border: 7px solid #0f0a07;
+  background-color: #fff;
   line-height: 28px;
 }
 .objects.blog .object .carousel-caption {
   display: none !important;
+}
+.objects.blog .object i,
+.objects.blog .object .blog-date {
+  color: #555;
+}
+.objects.blog .object i.fad,
+.objects.blog .object i.fal {
+  font-size: 18px;
+}
+.objects.blog .object .h3 i {
+  font-size: 20px;
 }
 @media (max-width: 1800px) {
   .trust {
