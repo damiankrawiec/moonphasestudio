@@ -130,7 +130,7 @@ input.form-control {
   color: #fff;
   font-size: 16px;
 }
-.menu a i.translation {
+.menu a .translation {
   font-size: 16px;
 }
 .menu li .active-arrow {
@@ -215,8 +215,8 @@ input.form-control {
   padding: 180px 0 100px;
   color: #fff !important;
 }
-.before-content-title i.translation,
-.after-content-title i.translation {
+.before-content-title .translation,
+.after-content-title .translation {
   font-size: 30px;
 }
 .after-content-title {

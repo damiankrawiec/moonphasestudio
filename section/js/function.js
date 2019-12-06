@@ -206,7 +206,7 @@ function move($direction, $paginationData) {
 
         });
 
-        //$('#scroll-top').trigger('click');
+        $('#scroll-top').trigger('click');
 
     }
 
@@ -241,7 +241,7 @@ function translation() {
 
             for($t in $translation) {
 
-                $('#' + $t).text($translation[$t]);
+                $('#' + $t).html($translation[$t]);
 
             }
 

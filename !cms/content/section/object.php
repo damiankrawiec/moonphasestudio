@@ -117,6 +117,12 @@ if($g_var1 != '') {
 
             }
 
+            $objectProperty = $g_system.',type-property,'.$g_var1.','.$g_var3;
+            require_once 'php/script/object-property.php';
+
+            $objectType = $g_system.',type,edit,'.$g_var1.','.$g_var3;
+            require_once 'php/script/object-type.php';
+
             $eventData = array(
                 'field' => $s_eventDefinition['edit'][$table],
                 'record' => $record,
@@ -142,9 +148,9 @@ if($g_var1 != '') {
                     'table' => array('name' => 'im_object_file', 'id' => 'file_id', 'sort' => 'position')
                 ),
                 'fix-4' => array(
-                    'collection' => array('name' => $translation['fix']['movie'], 'table' => 'im_movie'),
+                    'collection' => array('name' => $translation['fix']['source'], 'table' => 'im_source'),
                     'id' => array('name' => 'object_id', 'value' => $g_var3),
-                    'table' => array('name' => 'im_object_movie', 'id' => 'movie_id', 'sort' => 'position')
+                    'table' => array('name' => 'im_object_source', 'id' => 'source_id', 'sort' => 'position')
                 )
             );
 
