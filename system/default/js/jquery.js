@@ -92,7 +92,19 @@ $(function(){
 
     });
 
-    appendMenuIcon($('.menu li.active'));
+    if($('.menu li.active').length > 0) {
+
+        appendMenuIcon($('.menu li.active'));
+
+    }else{
+
+        var $liPortfolio = $('.menu li a[href="portfolio"]').parent();
+
+        $liPortfolio.addClass('active');
+
+        appendMenuIcon($liPortfolio);
+
+    }
 
     if($('.right-menu-box').length > 0) {
 
