@@ -55,6 +55,24 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionData->id, $label['blog']); ?>
 
+        <?php
+
+            if($sectionData->url == 'portfolio')
+                $object->display($sectionData->id, $label['portfolio']);
+
+            if($sectionData->url == 'home' or $sectionData->url == 'o-nas' or $sectionData->url == 'kontakt' or $sectionData->url == 'blog')
+                echo '<style>
+                        .menu li:last-child{
+                            display: block !important;
+                        }
+                        @media (max-width: 992px) {
+                          .menu li:last-child {
+                            display: none !important;
+                        }
+                     </style>';
+
+        ?>
+
         <?php $object->display($sectionData->id, $label['after-content-title']); ?>
 
         <?php $object->display($sectionData->id, $label['trust'], 'pagination:4'); ?>
@@ -102,8 +120,18 @@ $label = $object->getAllLabel();
 
 </div>
 
-<div class="right-menu-box">
+<?php
 
-    <?php $object->display($sectionData->id, $label['right-menu']); ?>
+if($sectionData->url != 'portfolio') {
 
-</div>
+    echo '<div class="right-menu-box">';
+
+        $object->display($sectionData->id, $label['right-menu-title']);
+
+        $object->display($sectionData->id, $label['portfolio']);
+
+        $object->display($sectionData->id, $label['inner-link']);
+
+    echo '</div>';
+
+}

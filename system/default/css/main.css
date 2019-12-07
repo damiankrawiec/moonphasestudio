@@ -42,6 +42,12 @@ input.form-control {
   list-style-type: none;
   display: inline;
 }
+.im-content .portfolio .object {
+  border: 15px solid #0f0a07;
+}
+.im-content .portfolio .object > div {
+  border: 1px solid #fff;
+}
 .objects .pagination-arrow {
   text-align: center;
   z-index: 1;
@@ -84,7 +90,11 @@ input.form-control {
 .slider .row {
   margin: -7px;
 }
-.slider p i {
+.slider h5 section {
+  font-size: 30px;
+  color: #d7af69;
+}
+.slider p section {
   font-size: 17px;
 }
 .menu,
@@ -105,22 +115,51 @@ input.form-control {
 .right-menu-box {
   width: 0%;
   height: 100%;
-  background: #d7af69;
+  background: #ddd;
   z-index: 3;
   position: fixed;
   right: 0;
   top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.right-menu-box .right-menu {
+.right-menu-box .objects:not(.right-menu-title) {
+  padding: 20px;
+}
+.right-menu-box .right-menu-title,
+.right-menu-box .portfolio,
+.right-menu-box .inner-link {
   display: none;
-  padding: 15px;
 }
-.right-menu-box .right-menu .no-data,
-.right-menu-box .right-menu .carousel-caption {
+.right-menu-box .right-menu-title .no-data,
+.right-menu-box .portfolio .no-data,
+.right-menu-box .inner-link .no-data {
   display: none !important;
 }
-.right-menu-box .right-menu .object img {
-  border: 5px solid #fff;
+.right-menu-box .right-menu-title {
+  margin-top: 22px;
+}
+.right-menu-box .right-menu-title section {
+  font-size: 28px;
+}
+.right-menu-box .portfolio .no-data,
+.right-menu-box .portfolio .carousel-caption {
+  display: none !important;
+}
+.right-menu-box .portfolio .object {
+  padding: 10px;
+}
+.right-menu-box .portfolio .object img {
+  border: 5px solid #ddd;
+}
+.right-menu-box .inner-link a {
+  padding: 10px 15px 15px;
+  position: absolute;
+  bottom: -50px;
+  width: 50%;
+  left: 25%;
+  font-size: 22px;
+  opacity: 0.8;
 }
 .menu {
   top: 35px;
@@ -149,6 +188,7 @@ input.form-control {
 }
 .menu .navbar-nav li:last-child {
   width: 30px;
+  display: none;
 }
 .menu .navbar-nav li:last-child i {
   font-size: 24px;
@@ -242,7 +282,7 @@ input.form-control {
 .form-title {
   padding-top: 42px;
 }
-.form-title i {
+.form-title .translation {
   font-size: 24px;
 }
 .contact-form img {
@@ -291,7 +331,7 @@ input.form-control {
 .footer-right .site-map-title {
   padding-bottom: 20px;
 }
-.footer-right .site-map-title i {
+.footer-right .site-map-title section {
   font-size: 28px;
 }
 .footer-bottom {
@@ -317,15 +357,17 @@ input.form-control {
   display: none !important;
 }
 .objects.blog .object i,
-.objects.blog .object .blog-date {
+.objects.blog .object .blog-date,
+.objects.blog .object .translation {
   color: #555;
 }
 .objects.blog .object i.fad,
 .objects.blog .object i.fal {
   font-size: 18px;
 }
-.objects.blog .object .h3 i {
+.objects.blog .object .h3 section {
   font-size: 20px;
+  margin-top: 20px;
 }
 @media (max-width: 1800px) {
   .trust {
@@ -355,16 +397,11 @@ input.form-control {
   }
 }
 @media (max-width: 992px) {
-  .menu li:last-child {
-    display: none;
-  }
   .im-content {
     width: 100% !important;
   }
   .right-menu-box {
     width: 0% !important;
-  }
-  .right-menu {
     display: none !important;
   }
 }

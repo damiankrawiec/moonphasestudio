@@ -30,12 +30,17 @@ $(function(){
         if($clickCount%2 === 0) {
 
             setTimeout(function () {
-                $('.right-menu').fadeIn();
+
+                $('.right-menu-box .right-menu-title, .right-menu-box .inner-link').show();
+
+                $('.right-menu-box .portfolio').fadeIn();
             }, 500);
 
         }else{
 
-            $('.right-menu').hide();
+            $('.right-menu-box .portfolio').hide();
+
+            $('.right-menu-box .right-menu-title, .right-menu-box .inner-link').hide();
 
         }
 
@@ -89,9 +94,9 @@ $(function(){
 
     appendMenuIcon($('.menu li.active'));
 
-    if($('.portfolio').length > 0) {
+    if($('.right-menu-box').length > 0) {
 
-        $('.menu li:last-child').hide();
+        $('.right-menu-box .object').removeClass('col-lg-6 col-xl-4');
 
     }
 

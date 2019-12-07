@@ -11,6 +11,16 @@
     }
   }
 }
+.im-content{
+  .portfolio{
+    .object{
+      border: 15px solid @black;
+      > div{
+        border: 1px solid @white;
+      }
+    }
+  }
+}
 .objects{
   .pagination-arrow{
     text-align: center;
@@ -55,8 +65,14 @@
     margin: -7px;
   }
   overflow: hidden;
+  h5{
+    section{
+      font-size: 30px;
+      color: @accent;
+    }
+  }
   p{
-    i {
+    section {
       font-size: 17px;
     }
   }
@@ -78,64 +94,92 @@ position: relative;
 .right-menu-box{
 width: 0%;
 height: 100%;
-background: @accent;
+background: @gray;
 z-index: 3;
 position: fixed;
 right: 0;
 top: 0;
-.right-menu{
-  display: none;
-  padding: 15px;
-  .no-data, .carousel-caption{
-    display: none !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .objects:not(.right-menu-title){
+    padding: 20px;
   }
-  .object{
-    img{
-      border: 5px solid @white;
+  .right-menu-title, .portfolio, .inner-link{
+    display: none;
+    .no-data{
+      display: none !important;
+    }
+   }
+  .right-menu-title{
+    margin-top: 22px;
+    section {
+      font-size: 28px;
+    }
+  }
+  .portfolio{
+    .no-data, .carousel-caption{
+      display: none !important;
+    }
+    .object{
+      padding: 10px;
+      img{
+        border: 5px solid @gray;
+      }
+    }
+}
+  .inner-link{
+    a{
+      padding: 10px 15px 15px;
+      position: absolute;
+      bottom:-50px;
+      width: 50%;
+      left: 25%;
+      font-size: 22px;
+      opacity: 0.8;
     }
   }
 }
-}
 .menu{
-top: 35px;
-right: 80px;
-a{
-  color: @white;
-  font-size: 16px;
-  .translation{
+  top: 35px;
+  right: 80px;
+  a{
+    color: @white;
     font-size: 16px;
+    .translation{
+      font-size: 16px;
+    }
   }
-}
-li{
-  .active-arrow {
-    width: 100%;
-    text-align: center;
-    i {
-      font-size: 22px;
+  li{
+    .active-arrow {
+      width: 100%;
       text-align: center;
-      position: relative;
-      top: -8px;
+      i {
+        font-size: 22px;
+        text-align: center;
+        position: relative;
+        top: -8px;
+        color: @accent;
+      }
+    }
+  }
+  li.active{
+    a {
       color: @accent;
     }
   }
-}
-li.active{
-  a {
-    color: @accent;
-  }
-}
-.navbar-nav{
-  li:last-child{
-    width: 30px;
-    i{
-      font-size: 24px;
-      padding-top: 1px
+  .navbar-nav{
+    li:last-child{
+      width: 30px;
+      display: none;
+      i{
+        font-size: 24px;
+        padding-top: 1px
+      }
     }
   }
-}
-#im_section-name-5{
-  display: none;
-}
+  #im_section-name-5{
+    display: none;
+  }
 }
 .icon-scroll-down{
 position: relative;
@@ -195,9 +239,9 @@ padding: 180px 0 100px;
 color: @white !important;
 }
 .before-content-title, .after-content-title{
-.translation {
-  font-size: 30px;
-}
+  .translation {
+    font-size: 30px;
+  }
 }
 .after-content-title{
 margin-bottom: -80px;
@@ -221,33 +265,33 @@ img{
 }
 .form-title{
   padding-top: 42px;
-  i {
+  .translation {
     font-size: 24px;
   }
 }
 .contact-form{
-img{
-  float: left;
-}
+  img{
+    float: left;
+  }
 }
 .im-send{
-background: none;
-.border-radius(0);
-color: @white;
-font-size: 16px;
-padding: 12px;
-margin: 0 10px 0;
-float: left;
+  background: none;
+  .border-radius(0);
+  color: @white;
+  font-size: 16px;
+  padding: 12px;
+  margin: 0 10px 0;
+  float: left;
 }
 .next-map, .footer-left, .footer-right {
-a {
-  font-size: 16px !important;
-  color: @white;
-}
-i.fal {
-  color: @accent;
-  font-size: 20px;
-}
+  a {
+    font-size: 16px !important;
+    color: @white;
+  }
+  i.fal {
+    color: @accent;
+    font-size: 20px;
+  }
 }
 .company-data{
 padding: 20px;
@@ -261,29 +305,29 @@ img{
 }
 }
 .footer-right{
-padding: 12px;
-.navbar-nav li:last-child {
-  display: none;
-}
-.site-map-title{
-  padding-bottom: 20px;
-  i{
-    font-size: 28px;
+  padding: 12px;
+  .navbar-nav li:last-child {
+    display: none;
+  }
+  .site-map-title{
+    padding-bottom: 20px;
+    section{
+      font-size: 28px;
+    }
   }
 }
-}
 .footer-bottom{
-padding-top: 20px;
-a{
-  color: @accent;
-}
-img{
-  width: 200px;
-  margin-bottom: 6px;
-}
-.carousel-caption{
-  display: none !important;
-}
+  padding-top: 20px;
+  a{
+    color: @accent;
+  }
+  img{
+    width: 200px;
+    margin-bottom: 6px;
+  }
+  .carousel-caption{
+    display: none !important;
+  }
 }
 .objects.blog{
   .object{
@@ -294,15 +338,16 @@ img{
     .carousel-caption{
       display: none !important;
     }
-    i, .blog-date{
+    i, .blog-date, .translation{
       color: @dark;
     }
     i.fad, i.fal{
       font-size: 18px;
     }
     .h3{
-      i{
+      section{
         font-size: 20px;
+        margin-top: 20px;
       }
     }
   }
