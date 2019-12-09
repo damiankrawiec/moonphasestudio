@@ -70,8 +70,8 @@ $translation = array(
         'source' => 'Pole na źródło',
         'icon' => 'Pole tekstowe ikony',
         'language_id' => 'Definicja języka',
-        'source' => 'Pole nadawcy',
-        'destination' => 'Pole odbiorcy'
+        'email_source' => 'Pole nadawcy',
+        'email_destination' => 'Pole odbiorcy'
     ),
     'select' => array('no-set' => 'Wybierz wartość', 'all' => 'Wszystkie wartości'),
     'fix' => array(
@@ -115,7 +115,8 @@ $tableDefinition = array(
         'description' => 'Opis techniczny',
         'date_create' => 'Utworzony',
         'date_modify' => 'Zmodyfikowany',
-        'status' => 'Status'
+        'status' => 'Status',
+        'status_copy' => 'Powielany'
     ),
     'im_type_property' => array(
         'name' => 'Nazwa',
@@ -147,7 +148,8 @@ $tableDefinition = array(
         'description' => 'Opis techniczny',
         'date_create' => 'Utworzony',
         'date_modify' => 'Zmodyfikowany',
-        'status' => 'Status'
+        'status' => 'Status',
+        'status_copy' => 'Powielana',
     ),
     'im_category' => array(
         'name' => 'Nazwa',
@@ -229,8 +231,8 @@ $tableDefinition = array(
     ),
     'im_form' => array(
         'name' => 'Nazwa',
-        'source' => 'Nadawca',
-        'destination' => 'Odbiorca',
+        'email_source' => 'Nadawca',
+        'email_destination' => 'Odbiorca',
         'description' => 'Opis techniczny',
         'date_create' => 'Utworzony'
     ),
@@ -264,7 +266,8 @@ $tableDefinitionEvent = array(
         'icon' => 'Ikona (Fontawesome)',
         'date' => 'Data',
         'content' => 'Treść',
-        'description' => 'Opis techniczny'
+        'description' => 'Opis techniczny',
+        'status_copy' => 'Przypisz obiekt do sekcji ze statusem "Powielana"',
     ),
     'im_section' => array(
         'name' => 'Nazwa',
@@ -272,7 +275,8 @@ $tableDefinitionEvent = array(
         'meta' => 'Opis strony (meta)',
         'icon' => 'Ikona (Fontawesome)',
         'class' => 'Właściwości',
-        'description' => 'Opis techniczny'
+        'description' => 'Opis techniczny',
+        'status_copy' => 'Przypisz do sekcji obiekty ze statusem "Powielany"'
     ),
     'im_category' => array(
         'name' => 'Nazwa',
@@ -341,8 +345,8 @@ $tableDefinitionEvent = array(
     'im_form' => array(
         'name' => 'Nazwa',
         'content' => 'Treść',
-        'source' => 'Nadawca',
-        'destination' => 'Odbiorca',
+        'email_source' => 'Nadawca',
+        'email_destination' => 'Odbiorca',
         'description' => 'Opis techniczny'
     )
 );
