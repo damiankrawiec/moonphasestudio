@@ -383,7 +383,6 @@ input.form-control {
   padding: 30px;
 }
 .portfolio-content .portfolio-source .portfolio-player {
-  border: 1px solid #fff;
   padding: 0;
 }
 @media (max-width: 1800px) {
