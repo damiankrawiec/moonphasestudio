@@ -500,7 +500,7 @@ create trigger im_file_update_date_modify
 
 -- FILE END --
 
--- MOVIE START --
+-- SOURCE START --
 
 -- table
 
@@ -533,7 +533,7 @@ create trigger im_source_update_date_modify
     for each row
     set new.date_modify = now();
 
--- MOVIE END --
+-- SOURCE END --
 
 -- OBJECT-IMAGE START --
 

@@ -435,3 +435,24 @@ function translationMove($target) {
     $('#translation-move').submit();
 
 }
+
+function insertToOption($multiple, $type) {
+
+    $multiple.find('a').each(function(){
+
+        var $text = $(this).text();
+
+        var $file = $text.substr($text.indexOf(':') + 2, $text.length);
+
+        var $fileDom;
+        if($type === 'image')
+            $fileDom = '<img src="../system/' + $('#url-system').val() + '/public/' + $file + '" alt="' + $file + '" style="height: 50px">';
+
+        if($type === 'file')
+            $fileDom = '<a href="../system/' + $('#url-system').val() + '/public/' + $file + '" title="' + $file + '" download>' + $('#download-icon').html() + '</a>';
+
+        $(this).html($fileDom + ' ' + $text);
+
+    });
+
+}

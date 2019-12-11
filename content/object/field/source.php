@@ -2,20 +2,25 @@
 
 if($this->checkDataDisplay($dataDisplay, 'array')) {
 
-    echo '<ul'.$classField.'>';
+    echo '<div class="row">';
     foreach ($dataDisplay as $m) {
 
-        echo '<li class="list-group-item">';
+        echo '<div' . $classField . '>';
 
-        if($m['content'] != '')
-            echo '<div>'.$m['content'].'</div>';
+        if ($m['content'] != '')
+            echo '<div>' . $m['content'] . '</div>';
 
-        echo '<div class="badge-light">'.$this->translationMark('im_source-name-'.$m['id'], $m['name']).'</div>';
+        if ($m['url'] != '') {
 
-        echo '<a href="'.$m['url'].'" title="'.$this->translationSystem['more'].'" target="_blank" class="btn btn-dark">'. $this->translationSystem['more'] . ' '.$this->icon['link']['external'].'</a>';
+            echo '<div class="badge-light">' . $this->translationMark('im_source-name-' . $m['id'], $m['name']) . '</div>';
 
-        echo '</li>';
+            echo '<a href="' . $m['url'] . '" title="' . $this->translationSystem['more'] . '" target="_blank" class="btn btn-dark">' . $this->translationSystem['more'] . ' ' . $this->icon['link']['external'] . '</a>';
+
+        }
+
+        echo '</div>';
+
     }
-    echo '</ul>';
+    echo '</div>';
 
 }

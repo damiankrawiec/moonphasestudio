@@ -112,4 +112,16 @@ $(function(){
 
     }
 
+    if($('.portfolio-back').length > 0) {
+
+        var $a = $('.portfolio-back a');
+
+        $a.attr('title', '');
+
+        $a.html('<i class="fal fa-chevron-left"></i>');
+
+        $a.addClass('btn btn-dark text-white');
+
+    }
+
 });

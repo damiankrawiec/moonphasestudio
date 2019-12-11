@@ -31,6 +31,8 @@ $label = $object->getAllLabel();
 
     </div>
 
+    <div class="clearfix"></div>
+
     <div class="<?php echo (!isset($sectionData->class) ? 'container' : $sectionData->class) ?>">
 
         <?php
@@ -52,6 +54,8 @@ $label = $object->getAllLabel();
         <?php $object->display($sectionData->id, $label['before-content-title']); ?>
 
         <?php $object->display($sectionData->id, $label['content']); ?>
+
+        <?php $object->display($sectionData->id, $label['portfolio-content']); ?>
 
         <?php $object->display($sectionData->id, $label['blog']); ?>
 

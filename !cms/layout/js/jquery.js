@@ -126,6 +126,46 @@ $(function(){
 
         }
 
+        if($('.fix-image').length > 0) {
+
+            var $nextImage = $('.fix-image').next();
+
+            insertToOption($nextImage, 'image');
+
+            $nextImage.on('click', function(){
+
+                insertToOption($nextImage, 'image');
+
+            });
+
+            $nextImage.children('input').on('keyup', function(){
+
+                insertToOption($nextImage, 'image');
+
+            });
+
+        }
+
+        if($('.fix-file').length > 0) {
+
+            var $nextFile = $('.fix-file').next();
+
+            insertToOption($nextFile, 'file');
+
+            $nextFile.on('click', function(){
+
+                insertToOption($nextFile, 'file');
+
+            });
+
+            $nextFile.children('input').on('keyup', function(){
+
+                insertToOption($nextImage, 'file');
+
+            });
+
+        }
+
         $('.selected-wrapper').change(function(){
 
             var $this = $(this);
