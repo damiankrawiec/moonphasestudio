@@ -108,7 +108,9 @@ $(function(){
 
     if($('.right-menu-box').length > 0) {
 
-        $('.right-menu-box .object').removeClass('col-lg-6 col-xl-4');
+        $('.right-menu-box .portfolio .object').removeClass('col-lg-6 col-xl-4');
+
+        $('.right-menu-box .portfolio .object').addClass('col-xl-6');
 
     }
 

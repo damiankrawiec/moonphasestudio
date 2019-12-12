@@ -15,9 +15,6 @@
   .portfolio{
     .object{
       border: 15px solid @black;
-      > div{
-        border: 1px solid @white;
-      }
     }
   }
 }
@@ -58,6 +55,15 @@
       font-size: 22px;
     }
   }
+}
+.objects:not(.slider) {
+  .object{
+    img:hover{
+      opacity: 0.8;
+    }
+
+  }
+
 }
 .slider{
   z-index: 1;
@@ -128,13 +134,9 @@ top: 0;
     }
 }
   .inner-link{
+    text-align: center;
     a{
-      padding: 10px 15px 15px;
-      position: absolute;
-      bottom:-50px;
-      width: 50%;
-      left: 25%;
-      font-size: 22px;
+      font-size: 16px;
       opacity: 0.8;
     }
   }
@@ -264,12 +266,14 @@ img{
 }
 }
 .form-title{
-  padding-top: 42px;
+  padding-top: 18px;
   .translation {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 .contact-form{
+  padding: 200px;
+  padding-top: 30px !important;
   img{
     float: left;
   }
@@ -333,7 +337,7 @@ img{
   .object{
     padding: 20px 50px 20px;
     border: 7px solid @black;
-    background-color: @white;
+    background-color: @light-gray;
     line-height: 28px;
     .carousel-caption{
       display: none !important;

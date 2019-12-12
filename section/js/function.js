@@ -311,7 +311,7 @@ function editor() {
 
         tinymce.init({
             selector: '.editor',
-            height: 300,
+            height: 200,
             menubar: false,
             plugins: "emoticons lists",
             toolbar: 'undo redo | fontsizeselect | bold italic underline strikethrough superscript subscript forecolor backcolor bullist | alignleft aligncenter alignright alignjustify | emoticons'

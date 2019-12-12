@@ -24,12 +24,13 @@ body {
 input.form-control {
   background: none !important;
   color: #fff !important;
-  padding: 30px 18px 31px !important;
-  margin: 10px 0 10px;
-  font-size: 20px !important;
+  padding: 5px 8px 7px !important;
+  margin: 5px 0 5px;
+  font-size: 16px !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  border-color: #555;
 }
 .im-logo {
   text-align: center;
@@ -44,9 +45,6 @@ input.form-control {
 }
 .im-content .portfolio .object {
   border: 15px solid #0f0a07;
-}
-.im-content .portfolio .object > div {
-  border: 1px solid #fff;
 }
 .objects .pagination-arrow {
   text-align: center;
@@ -82,6 +80,9 @@ input.form-control {
 }
 .object .carousel p {
   font-size: 22px;
+}
+.objects:not(.slider) .object img:hover {
+  opacity: 0.8;
 }
 .slider {
   z-index: 1;
@@ -152,13 +153,11 @@ input.form-control {
 .right-menu-box .portfolio .object img {
   border: 5px solid #ddd;
 }
+.right-menu-box .inner-link {
+  text-align: center;
+}
 .right-menu-box .inner-link a {
-  padding: 10px 15px 15px;
-  position: absolute;
-  bottom: -50px;
-  width: 50%;
-  left: 25%;
-  font-size: 22px;
+  font-size: 16px;
   opacity: 0.8;
 }
 .menu {
@@ -280,10 +279,14 @@ input.form-control {
   width: auto;
 }
 .form-title {
-  padding-top: 42px;
+  padding-top: 18px;
 }
 .form-title .translation {
-  font-size: 24px;
+  font-size: 28px;
+}
+.contact-form {
+  padding: 200px;
+  padding-top: 30px !important;
 }
 .contact-form img {
   float: left;
@@ -350,7 +353,7 @@ input.form-control {
 .objects.blog .object {
   padding: 20px 50px 20px;
   border: 7px solid #0f0a07;
-  background-color: #fff;
+  background-color: #eee;
   line-height: 28px;
 }
 .objects.blog .object .carousel-caption {
@@ -384,6 +387,11 @@ input.form-control {
 }
 .portfolio-content .portfolio-source .portfolio-player {
   padding: 0;
+}
+@media (max-width: 2300px) {
+  .contact-form {
+    padding: 50px;
+  }
 }
 @media (max-width: 1800px) {
   .trust {
