@@ -10,20 +10,12 @@ $sectionData = $this->getSection();
 $label = $object->getAllLabel();
 
 ?>
-<!--
-<div class="im-language">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <?php $object->displayLanguage(); ?>
-            </div>
-        </div>
-    </div>
-</div>
--->
+
 <div class="im-content">
 
     <div class="container-fluid">
+
+    	<?php $object->display($sectionData->id, $label['language']); ?>
 
         <?php $object->display($sectionData->id, $label['logo']); ?>
 
@@ -139,3 +131,6 @@ if($sectionData->url != 'portfolio') {
     echo '</div>';
 
 }
+
+if(!isset($session['cookie']))
+    $object->display($sectionData->id, $label['cookie']);
