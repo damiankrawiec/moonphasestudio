@@ -400,6 +400,37 @@ input.form-control {
   z-index: 1;
   color: #0f0a07;
 }
+.language ul {
+  position: fixed;
+  z-index: 12;
+  top: 53px;
+  right: 1px;
+}
+.language ul li {
+  list-style-type: none;
+  padding: 5px;
+  border: 1px solid #555;
+  margin: 1px;
+}
+.language ul li a {
+  color: #555;
+}
+.social-media {
+  position: absolute;
+  left: 15px;
+  top: 200px;
+}
+.social-media .object {
+  opacity: 0.6;
+  padding: 8px 3px 5px;
+  margin-top: 1px;
+  background: #555;
+  z-index: 12;
+}
+.social-media .object i {
+  color: #fff;
+  font-size: 20px;
+}
 @media (max-width: 2300px) {
   .contact-form {
     padding: 50px;

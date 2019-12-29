@@ -9,6 +9,8 @@ $(function(){
         var $icon;
         if($clickCount%2 === 0) {
 
+            $('.language').hide();
+
             changeWidth('.im-content', '75%');
 
             changeWidth('.right-menu-box', '25%');
@@ -16,6 +18,8 @@ $(function(){
             $icon = 'fal fa-times';
 
         }else{
+
+            $('.language').fadeIn(600);
 
             changeWidth('.right-menu-box', '0%');
 
@@ -34,6 +38,7 @@ $(function(){
                 $('.right-menu-box .right-menu-title, .right-menu-box .inner-link').show();
 
                 $('.right-menu-box .portfolio').fadeIn();
+
             }, 500);
 
         }else{

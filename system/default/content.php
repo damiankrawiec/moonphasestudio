@@ -15,6 +15,8 @@ $label = $object->getAllLabel();
 
     <div class="container-fluid">
 
+        <?php $object->display($sectionData->id, $label['social-media']); ?>
+
     	<?php $object->display($sectionData->id, $label['language']); ?>
 
         <?php $object->display($sectionData->id, $label['logo']); ?>

@@ -379,10 +379,43 @@ img{
   bottom: 0;
   left: 0;
   padding: 10px;
-  background-color: #fff;
+  background-color: @white;
   opacity: 0.8;
   width: 100%;
   height: 60px;
   z-index: 1;
   color: @black;
+}
+.language{
+  ul{
+    position: fixed;
+    z-index: 12;
+    top: 53px;
+    right: 1px;
+    li{
+      list-style-type: none;
+      padding: 5px;
+      border: 1px solid @dark;
+      margin: 1px;
+      a{
+        color: @dark;
+      }
+    }
+  }
+}
+.social-media{
+  position: absolute;
+  left: 15px;
+  top: 200px;
+  .object{
+    opacity: 0.6;
+    padding: 8px 3px 5px;
+    margin-top: 1px;
+    background: @dark;
+    z-index: 12;
+    i{
+      color: @white;
+      font-size: 20px;
+    }
+  }
 }
