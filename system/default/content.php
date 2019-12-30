@@ -58,7 +58,8 @@ $label = $object->getAllLabel();
             if($sectionData->url == 'portfolio')
                 $object->display($sectionData->id, $label['portfolio']);
 
-            if($sectionData->url == 'home' or $sectionData->url == 'o-nas' or $sectionData->url == 'kontakt' or $sectionData->url == 'blog')
+            if($sectionData->url == 'home' or $sectionData->url == 'o-nas' or $sectionData->url == 'kontakt' or $sectionData->url == 'blog') {
+
                 echo '<style>
                         .menu li:last-child{
                             display: block !important;
@@ -68,6 +69,8 @@ $label = $object->getAllLabel();
                             display: none !important;
                         }
                      </style>';
+
+            }
 
         ?>
 

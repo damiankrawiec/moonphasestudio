@@ -45,6 +45,13 @@ input.form-control {
 }
 .im-content .portfolio .object {
   border: 15px solid #0f0a07;
+  padding-bottom: 50px;
+}
+.im-content .portfolio .object .carousel-inner {
+  overflow: unset;
+}
+.im-content .portfolio .object .carousel-caption {
+  bottom: -58px;
 }
 .objects .pagination-arrow {
   text-align: center;
@@ -127,6 +134,16 @@ input.form-control {
 .right-menu-box .objects:not(.right-menu-title) {
   padding: 20px;
 }
+.right-menu-box .objects:not(.right-menu-title) .object {
+  padding-bottom: 50px;
+}
+.right-menu-box .objects:not(.right-menu-title) .object .carousel-inner {
+  overflow: unset;
+}
+.right-menu-box .objects:not(.right-menu-title) .object .carousel-caption {
+  bottom: -58px;
+  color: #0f0a07;
+}
 .right-menu-box .right-menu-title,
 .right-menu-box .portfolio,
 .right-menu-box .inner-link {
@@ -143,8 +160,7 @@ input.form-control {
 .right-menu-box .right-menu-title section {
   font-size: 28px;
 }
-.right-menu-box .portfolio .no-data,
-.right-menu-box .portfolio .carousel-caption {
+.right-menu-box .portfolio .no-data {
   display: none !important;
 }
 .right-menu-box .portfolio .object {
@@ -287,6 +303,7 @@ input.form-control {
 .contact-form {
   padding: 200px;
   padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 .contact-form img {
   float: left;
