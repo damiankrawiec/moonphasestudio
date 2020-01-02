@@ -213,6 +213,39 @@ function gallery() {
     $('a[data-rel^=lightcase]').lightcase();
 
 }
+function fileDelete() {
+
+    $('.file-delete-status').click(function() {
+
+        var $currentStatus = $(this).attr('id');
+
+        if($currentStatus === 'true') {
+
+            $('#url').hide();
+
+            $('.delete-file-alert').show();
+
+            $('#url').prop('disabled', true);
+
+            $('#file-delete').prop('disabled', false);
+
+        }
+
+        if($currentStatus === 'false') {
+
+            $('#url').show();
+
+            $('#url').prop('disabled', false);
+
+            $('.delete-file-alert').hide();
+
+            $('#file-delete').prop('disabled', true);
+
+        }
+
+    });
+
+}
 function activeMenu() {
 
     if($('.navbar li.active').length === 0) {
@@ -404,7 +437,7 @@ function collection() {
 }
 function filter($value) {
 
-    window.location = $('#url-system').val() + ',' + $('#url-section').val() + ',' + $value;
+    window.location = $('#url-section').val() + ',' + $value;
 
 }
 function scrollEvent() {

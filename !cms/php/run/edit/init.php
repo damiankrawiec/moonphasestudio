@@ -48,6 +48,16 @@ foreach($eventData['table'] as $table => $field) {
 
     }
 
+    if(isset($eventData['file_delete'])) {
+
+        $fileDataEdit = array(
+            'table' => $table,
+            'id' => $eventData['id']->$tableId
+        );
+        require_once 'php/run/edit/file.php';
+
+    }
+
 }
 
 $alert1 = $translation['message']['save-success'];
