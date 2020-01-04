@@ -53,6 +53,8 @@ $label = $object->getAllLabel();
 
         <?php $object->display($sectionData->id, $label['blog']); ?>
 
+        <?php $object->display($sectionData->id, $label['about-us']); ?>
+
         <?php
 
             if($sectionData->url == 'portfolio')
