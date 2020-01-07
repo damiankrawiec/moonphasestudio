@@ -426,11 +426,11 @@ input.form-control {
 .language ul li {
   list-style-type: none;
   padding: 5px;
-  border: 1px solid #555;
+  border: 1px solid #ddd;
   margin: 1px;
 }
 .language ul li a {
-  color: #555;
+  color: #ddd;
 }
 .social-media {
   position: absolute;
@@ -438,7 +438,7 @@ input.form-control {
   top: 200px;
 }
 .social-media .object {
-  opacity: 0.6;
+  opacity: 0.9;
   padding: 8px 3px 5px;
   margin-top: 1px;
   background: #555;
@@ -446,7 +446,7 @@ input.form-control {
 }
 .social-media .object i {
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
 }
 .about-us .carousel-caption {
   display: none !important;
