@@ -456,6 +456,19 @@ input.form-control {
   line-height: 34px;
   padding-top: 20px;
 }
+.editor {
+  width: 100%;
+  min-height: 199px;
+  background: none;
+  padding: 5px 8px 7px !important;
+  color: #fff;
+  border: 1px solid #555;
+}
+.alert1 {
+  text-align: center;
+  font-size: 20px;
+  color: #d7af69;
+}
 @media (max-width: 2300px) {
   .contact-form {
     padding: 50px;

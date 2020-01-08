@@ -41,7 +41,8 @@ $(function(){
         var $name = $this.find('.im-name').val();
         var $source = $this.find('.im-source').val();
         var $destination = $this.find('.im-destination').val();
-        var $content = tinyMCE.activeEditor.getContent();
+        var $content = $this.find('.editor').val();
+        //var $content = tinyMCE.activeEditor.getContent();
 
         $this.next().children('.im-hide').hide();
 
@@ -81,7 +82,7 @@ $(function(){
 
     });
 
-    editor();
+    //editor();
 
     scrollEvent();
 

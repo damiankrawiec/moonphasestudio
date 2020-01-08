@@ -12,7 +12,7 @@ if($p_sendForm and $p_sendForm['captcha'] == $p_sendForm['captchaText']) {
 
     $mailer = new PHPMailer(true);
 
-    $from = array('name' => 'example', 'address' => 'example@example.pl');
+    $from = array('name' => 'example', 'address' => 'formularz@moonphasestudio.com');
 
     try {
         //Server settings
@@ -21,7 +21,7 @@ if($p_sendForm and $p_sendForm['captcha'] == $p_sendForm['captchaText']) {
         $mailer->Host = '';
         $mailer->SMTPAuth = true;
         $mailer->Username = $from['address'];
-        $mailer->Password = '';
+        $mailer->Password = 'Qm3@#B7n211[E#@';
         $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mailer->Port = 587;
 
