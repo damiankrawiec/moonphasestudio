@@ -21,6 +21,7 @@
       }
       .carousel-caption{
         bottom: -58px;
+        display: block !important;
       }
     }
   }
@@ -122,7 +123,7 @@ top: 0;
         overflow: unset;
       }
       .carousel-caption{
-        bottom: -58px;
+        bottom: -50px;
         color: @black;
       }
     }
@@ -148,6 +149,9 @@ top: 0;
       padding: 10px;
       img{
         border: 5px solid @gray;
+      }
+      .translation{
+        font-size: 13px;
       }
     }
 }
@@ -202,19 +206,18 @@ top: 0;
   }
 }
 .icon-scroll-down{
-position: relative;
+position: absolute;
 color: @white;
-top: 120px;
+bottom: 147em;
 div{
   width: 100%;
   img{
-    width: 150px;
+    width: 7%;
     opacity: 0.1;
   }
 }
 .object{
   position: absolute;
-  top: -400px;
   margin-left: 30px;
   h5{
     display: none;
@@ -425,7 +428,7 @@ img{
 .social-media{
   position: absolute;
   left: 15px;
-  top: 200px;
+  top: 230px;
   .object{
     opacity: 0.9;
     padding: 8px 3px 5px;
@@ -464,4 +467,9 @@ img{
   text-align: center;
   font-size: 20px;
   color: @accent;
+}
+#im_object-content-7{
+  .title{
+    font-size: 28px;
+  }
 }

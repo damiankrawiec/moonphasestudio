@@ -52,6 +52,7 @@ input.form-control {
 }
 .im-content .portfolio .object .carousel-caption {
   bottom: -58px;
+  display: block !important;
 }
 .objects .pagination-arrow {
   text-align: center;
@@ -141,7 +142,7 @@ input.form-control {
   overflow: unset;
 }
 .right-menu-box .objects:not(.right-menu-title) .object .carousel-caption {
-  bottom: -58px;
+  bottom: -50px;
   color: #0f0a07;
 }
 .right-menu-box .right-menu-title,
@@ -168,6 +169,9 @@ input.form-control {
 }
 .right-menu-box .portfolio .object img {
   border: 5px solid #ddd;
+}
+.right-menu-box .portfolio .object .translation {
+  font-size: 13px;
 }
 .right-menu-box .inner-link {
   text-align: center;
@@ -213,20 +217,19 @@ input.form-control {
   display: none;
 }
 .icon-scroll-down {
-  position: relative;
+  position: absolute;
   color: #fff;
-  top: 120px;
+  bottom: 147em;
 }
 .icon-scroll-down div {
   width: 100%;
 }
 .icon-scroll-down div img {
-  width: 150px;
+  width: 7%;
   opacity: 0.1;
 }
 .icon-scroll-down .object {
   position: absolute;
-  top: -400px;
   margin-left: 30px;
 }
 .icon-scroll-down .object h5 {
@@ -435,7 +438,7 @@ input.form-control {
 .social-media {
   position: absolute;
   left: 15px;
-  top: 200px;
+  top: 230px;
 }
 .social-media .object {
   opacity: 0.9;
@@ -469,6 +472,9 @@ input.form-control {
   font-size: 20px;
   color: #d7af69;
 }
+#im_object-content-7 .title {
+  font-size: 28px;
+}
 @media (max-width: 2300px) {
   .contact-form {
     padding: 50px;
@@ -483,6 +489,12 @@ input.form-control {
     padding-top: 0;
     padding-bottom: 80px;
   }
+  #im_object-content-7 .title {
+    font-size: 24px;
+  }
+  .icon-scroll-down {
+    bottom: 139em;
+  }
 }
 @media (max-width: 1200px) {
   .objects .pagination-arrow i {
@@ -495,13 +507,20 @@ input.form-control {
   .content .text {
     font-size: 16px;
   }
+  #im_object-content-7 .title {
+    font-size: 20px;
+  }
 }
 @media (max-width: 992px) {
   .objects .pagination-arrow i {
     top: 250px;
   }
-}
-@media (max-width: 992px) {
+  #im_object-content-7 .title {
+    font-size: 16px;
+  }
+  .icon-scroll-down {
+    bottom: 140em;
+  }
   .im-content {
     width: 100% !important;
   }
@@ -540,6 +559,10 @@ input.form-control {
   }
   .content .text {
     font-size: 14px;
+  }
+  #im_object-content-7 .title {
+    font-size: 14px;
+    line-height: 32px;
   }
 }
 /*# sourceMappingURL=main.css.map */
