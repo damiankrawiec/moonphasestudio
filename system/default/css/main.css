@@ -219,13 +219,13 @@ input.form-control {
 .icon-scroll-down {
   position: absolute;
   color: #fff;
-  bottom: 147em;
+  bottom: 145em;
 }
 .icon-scroll-down div {
   width: 100%;
 }
 .icon-scroll-down div img {
-  width: 7%;
+  width: 5%;
   opacity: 0.1;
 }
 .icon-scroll-down .object {
@@ -493,7 +493,7 @@ input.form-control {
     font-size: 24px;
   }
   .icon-scroll-down {
-    bottom: 139em;
+    bottom: 137em;
   }
 }
 @media (max-width: 1200px) {
